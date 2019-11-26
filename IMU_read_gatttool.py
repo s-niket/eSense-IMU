@@ -3,11 +3,29 @@ import time
 
 
 
-def hexStrToInt(hexstr):
-    val = int(hexstr[0:2],16) + (int(hexstr[3:5],16)<<8)
+def hexStrToInt(hexstr1, hexstr2):
+    val = int(hexstr2,16) + (int(hexstr1,16)<<8)
     if ((val&0x8000)==0x8000): # treat signed 16bits
         val = -((val^0xffff)+1)
     return val
+
+
+def getGyroValues(hexstr):
+    gyro_x = hexStrToInt(hexstr[12:14], hexstr[15:17])/65.5
+    gyro_y = hexStrToInt(hexstr[18:20], hexstr[21:23])/65.5
+    gyro_z = hexStrToInt(hexstr[24:26], hexstr[27:29])/65.5
+
+    return gyro_x, gyro_y, gyro_z
+
+
+def getAcclValues(hexstr):
+    accl_x = (hexStrToInt(hexstr[30:32], hexstr[33:35])/8192)*9.80665
+    accl_y = (hexStrToInt(hexstr[36:38], hexstr[39:41])/8192)*9.80665
+    accl_z = (hexStrToInt(hexstr[42:44], hexstr[45:47])/8192)*9.80665
+
+    return accl_x, accl_y, accl_z
+
+
 
 
 
@@ -41,10 +59,39 @@ print("Write successful, IMU started publishing")
 
 
 while True:
-
-    child.sendline("char-read-hnd 0x0e")
+    #try:
+    child.sendline("char-read-hnd 0x000e")
     child.expect("Characteristic value/descriptor: ", timeout=10)
-    child.expect("\r\n", timeout=10)
-    print("IMU Data: {0} ".format(child.before.decode("utf-8")))
+    #child.expect("\r\n", timeout=10)
+    #print("Raw values: ",child.before.decode("utf-8").split('\r\n'))
+    raw = child.before.decode("utf-8").split('\r\n')
+    #print(raw)
+    try:
+        for i in range(1,len(raw)):
+            if(len(raw[i]) > 100):
+                imu_data = raw[i]
+                #print(imu_data)
+                #print(len(raw))
+                #print(imu_data[76:123])
+                imu_values = imu_data[76:123]
+
+                _imu_values = imu_values[12:14]
+
+                #print(imu_values[12:47])
+                gyro_x, gyro_y, gyro_z = getGyroValues(imu_values)
+                accl_x, accl_y, accl_z = getAcclValues(imu_values)
+                print("Gyroscope Reading: {0:.3f} {1:.3f} {2:.3f}".format(gyro_x, gyro_y, gyro_z))
+                print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
+
+                print("\n")
+    
+    except:
+        print("not")
+        pass
+    
+    
+
+    
+
 
 
