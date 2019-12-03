@@ -1,5 +1,8 @@
+# A dummy line
+
 import sys
 import time
+
 
 import bluetooth
 
