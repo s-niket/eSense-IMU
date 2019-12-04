@@ -1,4 +1,4 @@
-import pexpect
+cimport pexpect
 import time
 import math
 
@@ -36,7 +36,7 @@ last_y_angle = 0.0
 last_z_angle = 0.0
 
 def c_filtered_angle(ax_angle, ay_angle, gx_angle, gy_angle):
-    alpha = 0.92
+    alpha = 0.98
     c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle
     c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
     return (c_angle_x, c_angle_y)
@@ -65,12 +65,9 @@ def acc_angle(Ax, Ay, Az):
     ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg
     return (ax_angle, ay_angle)
 
-def get_last_time():
-    return last_read_time
 
-def set_last_read_angles(time, x, y):
-    global last_read_time, last_x_angle, last_y_angle
-    last_read_time = time
+def set_last_read_angles(x, y):
+    global last_x_angle, last_y_angle
     last_x_angle = x
     last_y_angle = y
 
@@ -137,7 +134,7 @@ while True:
                 #t_now = time.ticks_ms()    #The Error is happening here
                 #print(t_now)
                 #dt = (t_now - get_last_time())/1000
-                dt =  1/256
+                dt =  1/50
 
                 # Calculate angle of inclination or tilt for the x and y axes with acquired acceleration vectors
                 acc_angles = acc_angle(accl_x, accl_y, accl_z)
@@ -149,10 +146,9 @@ while True:
                 (c_angle_x, c_angle_y) = c_filtered_angle(acc_angles[0], acc_angles[1], gyr_angles[0], gyr_angles[1]) 
                 print(c_angle_x)
                 print(c_angle_y)
-                #set_last_read_angles(t_now, c_angle_x, c_angle_y)
+                set_last_read_angles( c_angle_x, c_angle_y)
 
     except:
         print("not")
         pass
-
 

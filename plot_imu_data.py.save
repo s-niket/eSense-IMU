@@ -1,0 +1,2616 @@
+pi@raspberrypi:~/eSense_IMU $ ls
+ble_write.py     discover_blue.py  gatt_characteristic_value.py  gatt_discover.py  IMU_fusion.py.save    IMU_fusion.py.save.2  pexpect_test.py  query.py
+discover_ble.py  gatt_ble_info.py  gatt_dicover.py               IMU_fusion.py     IMU_fusion.py.save.1  IMU_read_gatttool.py  pygatt_test.py   test.py
+pi@raspberrypi:~/eSense_IMU $ nano IMU_read_gatttool.py 
+pi@raspberrypi:~/eSense_IMU $ python3 IMU_read_gatttool.py 
+  File "IMU_read_gatttool.py", line 87
+    time.sleep(0.04)
+                   ^
+TabError: inconsistent use of tabs and spaces in indentation
+pi@raspberrypi:~/eSense_IMU $ nano IMU_read_gatttool.py 
+pi@raspberrypi:~/eSense_IMU $ python3 IMU_read_gatttool.py 
+eSense address:
+00:04:79:00:0d:ca
+Run gatttool...
+Connecting to 
+00:04:79:00:0d:ca
+ Connected!
+Start/Stop Value: 53 67 02 01 64  
+Starting the IMU data sampling....
+Write successful, IMU started publishing
+Gyroscope Reading: -13.237 6.718 -0.580
+Accelerometer Reading: 2.285 4.782 8.934
+
+
+Gyroscope Reading: -15.710 8.992 -0.733
+Accelerometer Reading: 2.225 4.696 8.887
+
+
+Gyroscope Reading: -15.374 10.427 0.366
+Accelerometer Reading: 2.139 4.597 8.862
+
+
+Gyroscope Reading: -12.580 8.000 0.687
+Accelerometer Reading: 2.077 4.483 8.854
+
+
+Gyroscope Reading: -9.496 5.450 0.763
+Accelerometer Reading: 2.063 4.454 8.796
+
+
+Gyroscope Reading: -8.718 6.275 0.962
+Accelerometer Reading: 2.011 4.405 8.752
+
+
+Gyroscope Reading: -5.160 6.519 1.267
+Accelerometer Reading: 2.035 4.421 8.714
+
+
+Gyroscope Reading: -4.214 7.969 0.687
+Accelerometer Reading: 2.054 4.420 8.808
+
+
+Gyroscope Reading: -2.244 7.237 -0.092
+Accelerometer Reading: 2.083 4.450 8.928
+
+
+Gyroscope Reading: -2.427 7.893 0.473
+Accelerometer Reading: 2.093 4.512 9.078
+
+
+Gyroscope Reading: -4.458 8.397 1.115
+Accelerometer Reading: 2.089 4.536 9.130
+
+
+Gyroscope Reading: -6.992 9.267 1.328
+Accelerometer Reading: 1.999 4.482 9.093
+
+
+Gyroscope Reading: -7.908 10.198 2.305
+Accelerometer Reading: 1.986 4.442 9.050
+
+
+Gyroscope Reading: -10.687 13.771 3.176
+Accelerometer Reading: 1.932 4.360 8.904
+
+
+Gyroscope Reading: -11.664 16.061 3.511
+Accelerometer Reading: 1.851 4.299 8.903
+
+
+Gyroscope Reading: -8.962 15.603 3.405
+Accelerometer Reading: 1.798 1.532 8.938
+
+
+Gyroscope Reading: -6.718 13.573 2.824
+Accelerometer Reading: 1.800 4.292 8.995
+
+
+Gyroscope Reading: -7.038 12.550 1.725
+Accelerometer Reading: 1.772 4.253 9.029
+
+
+Gyroscope Reading: -6.382 11.359 1.328
+Accelerometer Reading: 1.689 4.161 9.093
+
+
+Gyroscope Reading: -1.832 5.985 0.748
+Accelerometer Reading: 1.692 4.165 9.153
+
+
+Gyroscope Reading: -0.702 4.656 0.794
+Accelerometer Reading: 1.713 4.227 9.112
+
+
+Gyroscope Reading: -2.031 4.382 0.153
+Accelerometer Reading: 1.692 4.202 9.127
+
+
+Gyroscope Reading: -2.672 5.420 0.076
+Accelerometer Reading: 1.647 4.211 9.123
+
+
+Gyroscope Reading: -2.137 5.008 -0.244
+Accelerometer Reading: 1.612 4.244 9.142
+
+
+Gyroscope Reading: -1.008 4.550 0.427
+Accelerometer Reading: 1.659 4.293 9.115
+
+
+Gyroscope Reading: -1.237 5.252 0.214
+Accelerometer Reading: 1.632 4.254 9.100
+
+
+Gyroscope Reading: 0.779 5.099 0.366
+Accelerometer Reading: 1.580 4.201 9.121
+
+
+Gyroscope Reading: 3.099 3.099 0.046
+Accelerometer Reading: 1.585 4.219 9.112
+
+
+Gyroscope Reading: 3.466 3.511 0.809
+Accelerometer Reading: 1.616 4.271 9.027
+
+
+Gyroscope Reading: 2.947 4.366 1.084
+Accelerometer Reading: 1.597 4.257 8.991
+
+
+Gyroscope Reading: 2.794 3.863 0.809
+Accelerometer Reading: 1.569 4.228 9.097
+
+
+Gyroscope Reading: 2.748 3.359 0.718
+Accelerometer Reading: 1.530 4.228 9.123
+
+
+Gyroscope Reading: 3.328 1.389 0.931
+Accelerometer Reading: 1.536 4.256 9.179
+
+
+Gyroscope Reading: 2.427 0.962 0.565
+Accelerometer Reading: 1.531 4.225 9.153
+
+
+Gyroscope Reading: 1.817 1.115 0.198
+Accelerometer Reading: 1.502 4.201 9.075
+
+
+Gyroscope Reading: 2.092 1.221 -0.260
+Accelerometer Reading: 1.506 4.196 9.013
+
+
+Gyroscope Reading: 4.092 1.191 -1.206
+Accelerometer Reading: 1.482 4.173 8.994
+
+
+Gyroscope Reading: 6.794 0.305 -2.260
+Accelerometer Reading: 1.493 4.165 8.935
+
+
+Gyroscope Reading: 8.748 1.099 -4.260
+Accelerometer Reading: 1.489 4.153 8.905
+
+
+Gyroscope Reading: 8.183 2.397 -7.145
+Accelerometer Reading: 1.464 4.085 8.865
+
+
+Gyroscope Reading: 6.779 5.267 -9.664
+Accelerometer Reading: 1.405 4.027 8.807
+
+
+Gyroscope Reading: 8.260 6.427 -13.542
+Accelerometer Reading: 1.313 4.043 8.841
+
+
+Gyroscope Reading: 16.626 6.901 -13.969
+Accelerometer Reading: 1.249 4.233 8.855
+
+
+Gyroscope Reading: 26.397 3.053 -11.954
+Accelerometer Reading: 1.397 4.691 8.829
+
+
+Gyroscope Reading: 26.885 4.076 -10.076
+Accelerometer Reading: 1.487 4.869 8.795
+
+
+Gyroscope Reading: 25.084 8.931 -8.061
+Accelerometer Reading: 1.403 4.854 8.720
+
+
+Gyroscope Reading: 27.954 9.786 -7.130
+Accelerometer Reading: 1.296 4.876 8.654
+
+
+Gyroscope Reading: 32.595 9.573 -7.695
+Accelerometer Reading: 1.185 4.988 8.594
+
+
+Gyroscope Reading: 34.977 10.321 -7.802
+Accelerometer Reading: 1.129 5.066 8.523
+
+
+Gyroscope Reading: 36.626 12.763 -8.947
+Accelerometer Reading: 1.037 5.127 8.320
+
+
+Gyroscope Reading: 36.046 19.664 -10.015
+Accelerometer Reading: 0.971 5.126 8.043
+
+
+Gyroscope Reading: 40.641 32.458 -15.038
+Accelerometer Reading: 0.759 5.022 7.513
+
+
+Gyroscope Reading: 49.832 41.939 -20.840
+Accelerometer Reading: 0.553 4.955 7.220
+
+
+Gyroscope Reading: 81.450 49.115 -26.519
+Accelerometer Reading: 0.110 5.243 7.423
+
+
+Gyroscope Reading: 106.321 40.718 -27.359
+Accelerometer Reading: 0.098 5.808 7.712
+
+
+Gyroscope Reading: 123.084 30.031 -27.359
+Accelerometer Reading: 0.200 6.507 7.907
+
+
+Gyroscope Reading: 121.863 29.618 -27.511
+Accelerometer Reading: 0.055 6.875 8.051
+
+
+Gyroscope Reading: 113.435 24.901 -25.939
+Accelerometer Reading: 0.069 7.248 8.210
+
+
+Gyroscope Reading: 102.076 18.809 -22.336
+Accelerometer Reading: 0.219 7.882 8.013
+
+
+Gyroscope Reading: 70.382 18.153 -20.748
+Accelerometer Reading: 0.195 8.031 7.781
+
+
+Gyroscope Reading: 44.076 20.962 -17.985
+Accelerometer Reading: -0.051 7.995 7.387
+
+
+Gyroscope Reading: 34.595 18.824 -16.611
+Accelerometer Reading: -0.177 8.006 7.119
+
+
+Gyroscope Reading: 28.031 16.550 -13.267
+Accelerometer Reading: -0.336 8.113 6.791
+
+
+Gyroscope Reading: 25.863 14.122 -11.038
+Accelerometer Reading: -0.395 8.179 6.571
+
+
+Gyroscope Reading: 21.908 11.878 -8.229
+Accelerometer Reading: -0.524 8.096 6.393
+
+
+Gyroscope Reading: 20.061 10.366 -6.687
+Accelerometer Reading: -0.599 7.997 6.327
+
+
+Gyroscope Reading: 17.420 9.023 -6.534
+Accelerometer Reading: -0.688 7.861 6.319
+
+
+Gyroscope Reading: 16.443 11.450 -7.573
+Accelerometer Reading: -0.702 7.890 6.280
+
+
+Gyroscope Reading: 14.718 8.366 -8.656
+Accelerometer Reading: -0.707 7.927 6.177
+
+
+Gyroscope Reading: 13.282 13.389 -10.427
+Accelerometer Reading: -0.740 7.955 6.000
+
+
+Gyroscope Reading: 12.458 16.244 -11.359
+Accelerometer Reading: -0.830 7.936 5.971
+
+
+Gyroscope Reading: 14.031 17.099 -12.992
+Accelerometer Reading: -0.943 7.930 5.760
+
+
+Gyroscope Reading: 15.252 21.542 -14.229
+Accelerometer Reading: -1.082 7.970 5.503
+
+
+Gyroscope Reading: 17.420 26.641 -13.847
+Accelerometer Reading: -1.141 8.179 5.331
+
+
+Gyroscope Reading: 17.634 28.412 -11.969
+Accelerometer Reading: -1.068 8.345 5.176
+
+
+Gyroscope Reading: 13.115 35.267 -12.550
+Accelerometer Reading: -1.268 8.304 5.010
+
+
+Gyroscope Reading: 14.382 37.634 -12.779
+Accelerometer Reading: -1.395 8.311 4.984
+
+
+Gyroscope Reading: 21.328 39.053 -11.496
+Accelerometer Reading: -1.541 8.432 5.375
+
+
+Gyroscope Reading: 24.687 35.466 -10.794
+Accelerometer Reading: -1.561 8.582 5.637
+
+
+Gyroscope Reading: 18.962 34.321 -8.427
+Accelerometer Reading: -1.639 8.637 5.965
+
+
+Gyroscope Reading: 14.183 32.519 -6.153
+Accelerometer Reading: -1.739 8.572 6.145
+
+
+Gyroscope Reading: 8.687 29.237 -2.397
+Accelerometer Reading: -1.780 8.432 6.269
+
+
+Gyroscope Reading: 7.649 25.069 -1.160
+Accelerometer Reading: -1.844 8.301 6.215
+
+
+Gyroscope Reading: 8.198 16.656 -1.313
+Accelerometer Reading: -1.869 8.230 6.080
+
+
+Gyroscope Reading: 6.565 12.580 -1.802
+Accelerometer Reading: -1.842 8.225 5.990
+
+
+Gyroscope Reading: 3.145 7.679 -1.939
+Accelerometer Reading: -1.826 8.252 5.820
+
+
+Gyroscope Reading: -0.153 6.489 -3.710
+Accelerometer Reading: -2.017 8.200 5.484
+
+
+Gyroscope Reading: 1.511 6.336 -3.450
+Accelerometer Reading: -2.049 8.276 5.310
+
+
+Gyroscope Reading: 1.649 6.763 -3.221
+Accelerometer Reading: -2.009 8.271 5.496
+
+
+Gyroscope Reading: 1.557 5.359 -3.435
+Accelerometer Reading: -2.012 8.237 5.444
+
+
+Gyroscope Reading: -1.115 5.756 -4.519
+Accelerometer Reading: -2.037 8.259 5.288
+
+
+Gyroscope Reading: -4.076 9.374 -4.947
+Accelerometer Reading: -2.079 8.302 5.175
+
+
+Gyroscope Reading: -3.618 10.092 -4.855
+Accelerometer Reading: -2.095 8.308 5.213
+
+
+Gyroscope Reading: -1.252 8.443 -5.450
+Accelerometer Reading: -2.139 8.260 5.304
+
+
+Gyroscope Reading: -0.718 7.893 -6.092
+Accelerometer Reading: -2.140 8.223 5.386
+
+
+Gyroscope Reading: -3.099 7.832 -7.756
+Accelerometer Reading: -2.167 8.192 5.476
+
+
+Gyroscope Reading: -5.817 8.443 -9.344
+Accelerometer Reading: -2.239 8.197 5.448
+
+
+Gyroscope Reading: -6.840 7.832 -9.832
+Accelerometer Reading: -2.276 8.243 5.453
+
+
+Gyroscope Reading: -5.710 5.588 -9.939
+Accelerometer Reading: -2.310 8.270 5.543
+
+
+Gyroscope Reading: -3.771 2.305 -8.809
+Accelerometer Reading: -2.354 8.277 5.553
+
+
+Gyroscope Reading: -3.969 1.573 -7.038
+Accelerometer Reading: -2.394 8.235 5.538
+
+
+Gyroscope Reading: -5.435 1.924 -5.527
+Accelerometer Reading: -2.393 8.225 5.501
+
+
+Gyroscope Reading: -6.443 2.351 -4.290
+Accelerometer Reading: -2.397 8.183 5.452
+
+
+Gyroscope Reading: -6.305 2.260 -3.496
+Accelerometer Reading: -2.406 8.167 5.377
+
+
+Gyroscope Reading: -5.954 2.962 -3.160
+Accelerometer Reading: -2.489 8.078 5.355
+
+
+Gyroscope Reading: -4.244 1.740 -2.718
+Accelerometer Reading: -2.501 8.084 5.359
+
+
+Gyroscope Reading: -3.237 0.076 -2.702
+Accelerometer Reading: -2.491 8.147 5.382
+
+
+Gyroscope Reading: -2.947 -0.519 -2.733
+Accelerometer Reading: -2.509 8.146 5.405
+
+
+Gyroscope Reading: -2.198 -0.901 -2.305
+Accelerometer Reading: -2.523 8.128 5.452
+
+
+Gyroscope Reading: -2.015 -0.931 -1.405
+Accelerometer Reading: -2.501 8.152 5.458
+
+
+Gyroscope Reading: -3.359 0.214 -0.534
+Accelerometer Reading: -2.470 8.134 5.383
+
+
+Gyroscope Reading: -2.824 0.046 -0.779
+Accelerometer Reading: -2.523 8.022 5.417
+
+
+Gyroscope Reading: 0.168 -1.008 -0.733
+Accelerometer Reading: -2.529 7.999 5.466
+
+
+Gyroscope Reading: 0.214 -0.443 -0.595
+Accelerometer Reading: -2.519 8.045 5.504
+
+
+Gyroscope Reading: -0.427 0.168 -0.458
+Accelerometer Reading: -2.534 8.041 5.488
+
+
+Gyroscope Reading: -0.046 0.092 -0.168
+Accelerometer Reading: -2.495 8.034 5.461
+
+
+Gyroscope Reading: 0.107 0.672 -0.244
+Accelerometer Reading: -2.496 8.018 5.465
+
+
+Gyroscope Reading: 0.550 0.519 -0.489
+Accelerometer Reading: -2.496 8.029 5.485
+
+
+Gyroscope Reading: 0.137 0.321 -0.626
+Accelerometer Reading: -2.518 8.031 5.520
+
+
+Gyroscope Reading: -0.305 -0.656 -1.130
+Accelerometer Reading: -2.551 8.022 5.495
+
+
+Gyroscope Reading: 0.092 -1.527 -1.313
+Accelerometer Reading: -2.551 8.034 5.482
+
+
+Gyroscope Reading: 0.427 -2.122 -1.328
+Accelerometer Reading: -2.516 8.080 5.476
+
+
+Gyroscope Reading: 0.229 -1.374 -0.641
+Accelerometer Reading: -2.500 8.132 5.399
+
+
+Gyroscope Reading: -1.588 0.672 -0.641
+Accelerometer Reading: -2.532 8.092 5.362
+
+
+Gyroscope Reading: -1.618 1.420 -0.305
+Accelerometer Reading: -2.540 8.053 5.386
+
+
+Gyroscope Reading: -0.244 -0.397 -0.504
+Accelerometer Reading: -2.541 8.054 5.426
+
+
+Gyroscope Reading: -0.137 -0.550 -0.443
+Accelerometer Reading: -2.543 8.080 5.465
+
+
+Gyroscope Reading: 0.092 -0.947 -0.580
+Accelerometer Reading: -2.546 8.091 5.511
+
+
+Gyroscope Reading: -0.107 -0.504 -0.275
+Accelerometer Reading: -2.550 8.110 5.516
+
+
+Gyroscope Reading: -1.435 1.130 0.107
+Accelerometer Reading: -2.585 8.073 5.528
+
+
+Gyroscope Reading: -1.405 0.931 0.015
+Accelerometer Reading: -2.611 8.027 5.496
+
+
+Gyroscope Reading: -0.290 -0.977 -0.458
+Accelerometer Reading: -2.592 8.017 5.461
+
+
+Gyroscope Reading: -0.580 -1.313 -0.977
+Accelerometer Reading: -2.582 8.001 5.418
+
+
+Gyroscope Reading: -0.183 -1.542 -1.053
+Accelerometer Reading: -2.562 8.040 5.394
+
+
+Gyroscope Reading: 0.107 -1.679 -1.191
+Accelerometer Reading: -2.547 8.102 5.356
+
+
+Gyroscope Reading: -0.656 -0.550 -1.053
+Accelerometer Reading: -2.565 8.090 5.362
+
+
+Gyroscope Reading: 0.351 0.260 -0.718
+Accelerometer Reading: -2.602 8.053 5.436
+
+
+Gyroscope Reading: 1.145 0.733 0.275
+Accelerometer Reading: -2.580 8.064 5.486
+
+
+Gyroscope Reading: 1.282 0.366 0.183
+Accelerometer Reading: -2.571 8.045 5.526
+
+
+Gyroscope Reading: 0.382 0.260 0.275
+Accelerometer Reading: -2.546 8.027 5.526
+
+
+Gyroscope Reading: -0.885 0.382 0.198
+Accelerometer Reading: -2.544 8.042 5.453
+
+
+Gyroscope Reading: -1.221 0.305 -0.198
+Accelerometer Reading: -2.549 8.040 5.416
+
+
+Gyroscope Reading: -0.183 0.031 -0.351
+Accelerometer Reading: -2.564 8.019 5.399
+
+
+Gyroscope Reading: 0.168 -0.183 -0.901
+Accelerometer Reading: -2.606 7.962 5.455
+
+
+Gyroscope Reading: 0.702 -0.885 -0.977
+Accelerometer Reading: -2.610 7.987 5.510
+
+
+Gyroscope Reading: -0.336 -0.870 -1.130
+Accelerometer Reading: -2.600 8.054 5.537
+
+
+Gyroscope Reading: -0.519 -0.748 -0.916
+Accelerometer Reading: -2.616 8.060 5.505
+
+
+Gyroscope Reading: -0.168 -0.809 -0.504
+Accelerometer Reading: -2.583 8.072 5.495
+
+
+Gyroscope Reading: 0.137 -1.344 -0.580
+Accelerometer Reading: -2.601 8.042 5.444
+
+
+Gyroscope Reading: 0.046 -0.794 -0.382
+Accelerometer Reading: -2.611 8.046 5.426
+
+
+Gyroscope Reading: 0.687 -0.718 0.076
+Accelerometer Reading: -2.595 8.059 5.426
+
+
+Gyroscope Reading: 0.534 -0.489 0.244
+Accelerometer Reading: -2.592 8.066 5.436
+
+
+Gyroscope Reading: 0.031 -0.107 0.061
+Accelerometer Reading: -2.610 8.037 5.449
+
+
+Gyroscope Reading: -0.351 0.504 0.473
+Accelerometer Reading: -2.604 8.019 5.489
+
+
+Gyroscope Reading: -0.947 1.023 0.840
+Accelerometer Reading: -2.598 8.047 5.472
+
+
+Gyroscope Reading: -1.282 1.389 0.962
+Accelerometer Reading: -2.593 8.059 5.465
+
+
+Gyroscope Reading: 0.107 -0.046 0.321
+Accelerometer Reading: -2.602 8.054 5.430
+
+
+Gyroscope Reading: 0.244 0.137 0.229
+Accelerometer Reading: -2.613 8.022 5.453
+
+
+Gyroscope Reading: 0.427 -0.351 -0.031
+Accelerometer Reading: -2.610 8.030 5.498
+
+
+Gyroscope Reading: -0.015 -0.198 0.000
+Accelerometer Reading: -2.614 8.061 5.496
+
+
+Gyroscope Reading: -0.412 -0.214 -0.107
+Accelerometer Reading: -2.652 8.031 5.460
+
+
+Gyroscope Reading: 0.550 -0.885 0.183
+Accelerometer Reading: -2.593 8.092 5.440
+
+
+Gyroscope Reading: 0.305 -0.870 0.305
+Accelerometer Reading: -2.592 8.095 5.428
+
+
+Gyroscope Reading: -0.046 -0.718 0.244
+Accelerometer Reading: -2.622 8.048 5.418
+
+
+Gyroscope Reading: 0.214 -0.626 0.198
+Accelerometer Reading: -2.628 8.041 5.448
+
+
+Gyroscope Reading: 0.137 -1.160 0.183
+Accelerometer Reading: -2.608 8.076 5.488
+
+
+Gyroscope Reading: -0.336 -1.191 0.275
+Accelerometer Reading: -2.622 8.049 5.482
+
+
+Gyroscope Reading: 0.275 -1.420 0.427
+Accelerometer Reading: -2.626 8.018 5.480
+
+
+Gyroscope Reading: 0.779 -1.466 0.809
+Accelerometer Reading: -2.599 8.029 5.474
+
+
+Gyroscope Reading: 0.275 -1.099 1.008
+Accelerometer Reading: -2.553 8.015 5.424
+
+
+Gyroscope Reading: 0.275 -1.130 0.702
+Accelerometer Reading: -2.549 7.985 5.454
+
+
+Gyroscope Reading: 0.779 -1.221 0.122
+Accelerometer Reading: -2.569 8.013 5.501
+
+
+Gyroscope Reading: 0.992 -1.618 -0.473
+Accelerometer Reading: -2.612 8.066 5.555
+
+
+Gyroscope Reading: 0.748 -1.847 -0.366
+Accelerometer Reading: -2.652 8.084 5.571
+
+
+Gyroscope Reading: 0.687 -2.076 0.168
+Accelerometer Reading: -2.625 8.126 5.520
+
+
+Gyroscope Reading: -0.824 -1.450 0.763
+Accelerometer Reading: -2.605 8.114 5.477
+
+
+Gyroscope Reading: -1.221 -0.977 1.298
+Accelerometer Reading: -2.559 8.101 5.320
+
+
+Gyroscope Reading: -1.099 -0.458 1.023
+Accelerometer Reading: -2.570 8.055 5.313
+
+
+Gyroscope Reading: 0.061 -0.443 0.931
+Accelerometer Reading: -2.583 8.055 5.397
+
+
+Gyroscope Reading: -0.153 -0.229 0.763
+Accelerometer Reading: -2.605 8.052 5.470
+
+
+Gyroscope Reading: -0.214 -0.412 1.115
+Accelerometer Reading: -2.573 8.094 5.464
+
+
+Gyroscope Reading: 0.107 -0.702 1.374
+Accelerometer Reading: -2.567 8.078 5.483
+
+
+Gyroscope Reading: 0.275 -0.656 1.573
+Accelerometer Reading: -2.562 8.058 5.465
+
+
+Gyroscope Reading: -0.092 -0.473 1.389
+Accelerometer Reading: -2.550 8.030 5.438
+
+
+Gyroscope Reading: -0.214 -0.321 1.344
+Accelerometer Reading: -2.531 8.036 5.418
+
+
+Gyroscope Reading: 0.687 -0.779 1.420
+Accelerometer Reading: -2.502 8.016 5.440
+
+
+Gyroscope Reading: 0.397 -0.397 1.221
+Accelerometer Reading: -2.507 7.991 5.467
+
+
+Gyroscope Reading: 0.122 -0.397 0.611
+Accelerometer Reading: -2.551 7.993 5.507
+
+
+Gyroscope Reading: 0.153 -0.733 0.321
+Accelerometer Reading: -2.574 8.046 5.492
+
+
+Gyroscope Reading: -0.015 -0.504 0.794
+Accelerometer Reading: -2.579 8.079 5.501
+
+
+Gyroscope Reading: 0.198 -0.672 1.023
+Accelerometer Reading: -2.543 8.084 5.492
+
+
+Gyroscope Reading: 0.092 -0.870 0.779
+Accelerometer Reading: -2.528 8.054 5.497
+
+
+Gyroscope Reading: 0.137 -1.145 0.672
+Accelerometer Reading: -2.523 8.054 5.430
+
+
+Gyroscope Reading: -0.656 -0.565 0.366
+Accelerometer Reading: -2.547 8.015 5.428
+
+
+Gyroscope Reading: -0.336 -0.489 0.382
+Accelerometer Reading: -2.556 8.021 5.442
+
+
+Gyroscope Reading: -0.305 -0.092 0.473
+Accelerometer Reading: -2.552 8.092 5.407
+
+
+Gyroscope Reading: -0.412 0.336 0.214
+Accelerometer Reading: -2.586 8.072 5.482
+
+
+Gyroscope Reading: 0.534 -0.076 0.595
+Accelerometer Reading: -2.563 8.106 5.521
+
+
+Gyroscope Reading: -1.038 0.840 1.435
+Accelerometer Reading: -2.532 8.125 5.485
+
+
+Gyroscope Reading: -1.145 0.656 1.313
+Accelerometer Reading: -2.552 8.055 5.472
+
+
+Gyroscope Reading: -0.550 0.351 1.252
+Accelerometer Reading: -2.528 8.034 5.464
+
+
+Gyroscope Reading: -1.405 0.931 0.992
+Accelerometer Reading: -2.527 8.025 5.479
+
+
+Gyroscope Reading: -1.908 1.328 0.931
+Accelerometer Reading: -2.544 8.047 5.479
+
+
+Gyroscope Reading: -1.832 1.450 1.145
+Accelerometer Reading: -2.532 8.092 5.492
+
+
+Gyroscope Reading: -2.244 2.015 1.176
+Accelerometer Reading: -2.563 8.036 5.514
+
+
+Gyroscope Reading: -2.015 1.634 1.008
+Accelerometer Reading: -2.565 8.006 5.502
+
+
+Gyroscope Reading: -1.847 1.267 0.595
+Accelerometer Reading: -2.556 8.022 5.471
+
+
+Gyroscope Reading: -1.374 0.962 0.656
+Accelerometer Reading: -2.551 8.048 5.430
+
+
+Gyroscope Reading: -1.634 1.298 0.427
+Accelerometer Reading: -2.552 8.036 5.442
+
+
+Gyroscope Reading: -1.969 1.649 0.183
+Accelerometer Reading: -2.574 8.019 5.467
+
+
+Gyroscope Reading: -1.893 1.664 0.504
+Accelerometer Reading: -2.557 8.089 5.483
+
+
+Gyroscope Reading: -1.710 1.389 0.641
+Accelerometer Reading: -2.555 8.090 5.499
+
+
+Gyroscope Reading: -0.626 0.458 0.733
+Accelerometer Reading: -2.539 8.053 5.546
+
+
+Gyroscope Reading: -0.824 0.656 0.870
+Accelerometer Reading: -2.521 8.036 5.511
+
+
+Gyroscope Reading: -1.832 0.962 0.458
+Accelerometer Reading: -2.577 7.957 5.514
+
+
+Gyroscope Reading: -0.885 1.069 0.534
+Accelerometer Reading: -2.613 7.950 5.531
+
+
+Gyroscope Reading: -1.160 0.962 -0.015
+Accelerometer Reading: -2.614 7.995 5.545
+
+
+Gyroscope Reading: -1.695 0.962 -0.031
+Accelerometer Reading: -2.624 8.049 5.540
+
+
+Gyroscope Reading: -1.710 0.901 0.092
+Accelerometer Reading: -2.605 8.068 5.483
+
+
+Gyroscope Reading: -0.809 0.550 0.489
+Accelerometer Reading: -2.553 8.086 5.450
+
+
+Gyroscope Reading: -0.840 0.580 0.779
+Accelerometer Reading: -2.529 8.064 5.479
+
+
+Gyroscope Reading: -2.107 1.939 0.947
+Accelerometer Reading: -2.589 7.987 5.480
+
+
+Gyroscope Reading: -1.710 1.679 0.611
+Accelerometer Reading: -2.625 7.964 5.537
+
+
+Gyroscope Reading: -1.099 0.931 0.565
+Accelerometer Reading: -2.595 8.037 5.573
+
+
+Gyroscope Reading: -1.405 0.672 0.641
+Accelerometer Reading: -2.561 8.031 5.547
+
+
+Gyroscope Reading: -1.450 0.977 0.779
+Accelerometer Reading: -2.545 7.954 5.508
+
+
+Gyroscope Reading: -1.023 0.702 0.366
+Accelerometer Reading: -2.569 7.950 5.511
+
+
+Gyroscope Reading: -1.344 0.656 0.031
+Accelerometer Reading: -2.562 7.985 5.511
+
+
+Gyroscope Reading: -1.191 0.214 -0.580
+Accelerometer Reading: -2.598 7.949 5.525
+
+
+Gyroscope Reading: -0.702 0.183 -0.611
+Accelerometer Reading: -2.589 7.970 5.549
+
+
+Gyroscope Reading: -0.962 0.153 -0.809
+Accelerometer Reading: -2.598 7.998 5.545
+
+
+Gyroscope Reading: -1.649 0.489 -0.809
+Accelerometer Reading: -2.630 8.019 5.511
+
+
+Gyroscope Reading: -1.237 0.840 -0.244
+Accelerometer Reading: -2.643 8.023 5.477
+
+
+Gyroscope Reading: -0.595 0.672 -0.015
+Accelerometer Reading: -2.620 8.023 5.498
+
+
+Gyroscope Reading: -0.672 0.916 0.382
+Accelerometer Reading: -2.624 8.009 5.549
+
+
+Gyroscope Reading: -1.160 1.298 0.748
+Accelerometer Reading: -2.626 7.994 5.570
+
+
+Gyroscope Reading: -1.588 1.649 0.977
+Accelerometer Reading: -2.641 7.938 5.570
+
+
+Gyroscope Reading: -1.450 1.252 0.534
+Accelerometer Reading: -2.640 7.920 5.553
+
+
+Gyroscope Reading: -0.916 0.275 -0.443
+Accelerometer Reading: -2.635 7.922 5.586
+
+
+Gyroscope Reading: -0.794 0.305 -0.351
+Accelerometer Reading: -2.622 7.960 5.551
+
+
+Gyroscope Reading: -0.916 0.763 -0.244
+Accelerometer Reading: -2.623 7.969 5.507
+
+
+Gyroscope Reading: -0.412 0.763 -0.076
+Accelerometer Reading: -2.629 7.969 5.540
+
+
+Gyroscope Reading: -0.427 0.824 0.336
+Accelerometer Reading: -2.614 8.019 5.559
+
+
+Gyroscope Reading: -1.038 0.519 -0.092
+Accelerometer Reading: -2.649 8.006 5.606
+
+
+Gyroscope Reading: -1.221 0.489 0.382
+Accelerometer Reading: -2.652 8.034 5.584
+
+
+Gyroscope Reading: -1.511 0.580 0.473
+Accelerometer Reading: -2.667 8.004 5.511
+
+
+Gyroscope Reading: -1.145 0.595 0.824
+Accelerometer Reading: -2.655 7.949 5.473
+
+
+Gyroscope Reading: -0.748 0.885 0.611
+Accelerometer Reading: -2.643 7.883 5.474
+
+
+Gyroscope Reading: 0.214 0.626 0.015
+Accelerometer Reading: -2.637 7.887 5.549
+
+
+Gyroscope Reading: 0.107 0.168 -0.412
+Accelerometer Reading: -2.648 7.955 5.600
+
+
+Gyroscope Reading: -1.008 0.565 -0.534
+Accelerometer Reading: -2.677 7.960 5.611
+
+
+Gyroscope Reading: -0.244 0.000 0.092
+Accelerometer Reading: -2.649 8.003 5.586
+
+
+Gyroscope Reading: -1.069 0.687 0.626
+Accelerometer Reading: -2.614 7.998 5.558
+
+
+Gyroscope Reading: -1.145 0.641 0.733
+Accelerometer Reading: -2.624 7.939 5.514
+
+
+Gyroscope Reading: -0.947 0.718 0.595
+Accelerometer Reading: -2.635 7.950 5.540
+
+
+Gyroscope Reading: -0.962 0.427 -0.092
+Accelerometer Reading: -2.673 7.956 5.565
+
+
+Gyroscope Reading: -0.397 -0.015 -0.260
+Accelerometer Reading: -2.701 7.946 5.600
+
+
+Gyroscope Reading: 0.229 -0.565 -0.244
+Accelerometer Reading: -2.710 7.957 5.638
+
+
+Gyroscope Reading: -0.397 -0.321 -0.122
+Accelerometer Reading: -2.684 7.980 5.593
+
+
+Gyroscope Reading: -1.069 -0.061 -0.046
+Accelerometer Reading: -2.701 7.955 5.527
+
+
+Gyroscope Reading: -0.595 -0.031 0.061
+Accelerometer Reading: -2.687 7.943 5.483
+
+
+Gyroscope Reading: -0.092 0.260 0.489
+Accelerometer Reading: -2.648 7.956 5.511
+
+
+Gyroscope Reading: -0.443 0.198 0.260
+Accelerometer Reading: -2.667 7.928 5.573
+
+
+Gyroscope Reading: -0.748 0.687 0.519
+Accelerometer Reading: -2.704 7.939 5.569
+
+
+Gyroscope Reading: -0.550 0.748 0.748
+Accelerometer Reading: -2.690 7.973 5.574
+
+
+Gyroscope Reading: 0.046 0.122 0.855
+Accelerometer Reading: -2.655 7.971 5.580
+
+
+Gyroscope Reading: -0.672 0.351 0.718
+Accelerometer Reading: -2.634 7.933 5.561
+
+
+Gyroscope Reading: -1.221 0.672 0.748
+Accelerometer Reading: -2.638 7.933 5.528
+
+
+Gyroscope Reading: -1.267 1.023 0.580
+Accelerometer Reading: -2.653 7.914 5.543
+
+
+Gyroscope Reading: -0.656 0.519 0.336
+Accelerometer Reading: -2.662 7.906 5.553
+
+
+Gyroscope Reading: -0.916 0.840 0.076
+Accelerometer Reading: -2.679 7.919 5.587
+
+
+Gyroscope Reading: -0.916 0.916 -0.015
+Accelerometer Reading: -2.685 7.934 5.583
+
+
+Gyroscope Reading: -0.824 1.237 0.275
+Accelerometer Reading: -2.676 7.954 5.612
+
+
+Gyroscope Reading: -1.282 1.298 0.382
+Accelerometer Reading: -2.667 7.971 5.596
+
+
+Gyroscope Reading: -1.374 0.550 -0.107
+Accelerometer Reading: -2.707 7.914 5.623
+
+
+Gyroscope Reading: -0.718 -0.031 -0.046
+Accelerometer Reading: -2.714 7.912 5.606
+
+
+Gyroscope Reading: -0.641 0.260 0.168
+Accelerometer Reading: -2.722 7.914 5.612
+
+
+Gyroscope Reading: -0.321 -0.137 0.427
+Accelerometer Reading: -2.710 7.944 5.594
+
+
+Gyroscope Reading: -1.084 0.565 0.916
+Accelerometer Reading: -2.698 7.932 5.570
+
+
+Gyroscope Reading: -0.870 0.168 0.351
+Accelerometer Reading: -2.711 7.885 5.564
+
+
+Gyroscope Reading: 0.168 -0.092 0.458
+Accelerometer Reading: -2.690 7.909 5.601
+
+
+Gyroscope Reading: 0.397 -0.550 0.427
+Accelerometer Reading: -2.668 7.932 5.634
+
+
+Gyroscope Reading: -0.718 0.000 0.550
+Accelerometer Reading: -2.673 7.926 5.593
+
+
+Gyroscope Reading: -1.221 0.611 0.336
+Accelerometer Reading: -2.692 7.908 5.541
+
+
+Gyroscope Reading: -0.748 0.351 0.107
+Accelerometer Reading: -2.710 7.890 5.571
+
+
+Gyroscope Reading: -0.565 0.305 0.305
+Accelerometer Reading: -2.692 7.913 5.575
+
+
+Gyroscope Reading: -0.763 0.779 0.580
+Accelerometer Reading: -2.713 7.919 5.569
+
+
+Gyroscope Reading: -0.412 0.885 0.748
+Accelerometer Reading: -2.705 7.914 5.587
+
+
+Gyroscope Reading: -0.763 0.977 0.595
+Accelerometer Reading: -2.720 7.906 5.595
+
+
+Gyroscope Reading: -1.008 0.733 0.458
+Accelerometer Reading: -2.734 7.942 5.592
+
+
+Gyroscope Reading: -0.931 0.824 0.855
+Accelerometer Reading: -2.726 7.980 5.606
+
+
+Gyroscope Reading: -1.267 1.099 0.916
+Accelerometer Reading: -2.727 7.928 5.617
+
+
+Gyroscope Reading: -0.672 0.748 0.855
+Accelerometer Reading: -2.746 7.872 5.631
+
+
+Gyroscope Reading: -1.084 1.099 1.237
+Accelerometer Reading: -2.716 7.897 5.626
+
+
+Gyroscope Reading: -1.664 1.069 1.282
+Accelerometer Reading: -2.668 7.876 5.571
+
+
+Gyroscope Reading: -1.588 1.344 0.962
+Accelerometer Reading: -2.656 7.852 5.576
+
+
+Gyroscope Reading: -0.977 1.344 0.672
+Accelerometer Reading: -2.658 7.870 5.575
+
+
+Gyroscope Reading: -0.489 1.420 0.595
+Accelerometer Reading: -2.703 7.885 5.663
+
+
+Gyroscope Reading: -1.176 1.481 0.061
+Accelerometer Reading: -2.738 7.847 5.667
+
+
+^Cnot
+Gyroscope Reading: 2.046 -1.893 -0.397
+Accelerometer Reading: -2.914 7.782 5.705
+
+
+Gyroscope Reading: 2.015 -2.580 -0.153
+Accelerometer Reading: -2.895 7.813 5.734
+
+
+Gyroscope Reading: 1.786 -3.649 -1.252
+Accelerometer Reading: -2.917 7.782 5.662
+
+
+Gyroscope Reading: 2.137 -4.443 -2.046
+Accelerometer Reading: -2.878 7.780 5.608
+
+
+Gyroscope Reading: 2.305 -5.359 -3.053
+Accelerometer Reading: -2.867 7.746 5.654
+
+
+Gyroscope Reading: 2.901 -6.901 -3.344
+Accelerometer Reading: -2.844 7.683 5.759
+
+
+Gyroscope Reading: 2.702 -7.695 -4.168
+Accelerometer Reading: -2.848 7.652 5.782
+
+
+Gyroscope Reading: 0.870 -5.969 -3.939
+Accelerometer Reading: -2.843 7.646 5.808
+
+
+Gyroscope Reading: -0.183 -4.351 -3.237
+Accelerometer Reading: -2.846 7.636 5.782
+
+
+Gyroscope Reading: -2.855 -1.282 -2.840
+Accelerometer Reading: -2.871 7.560 5.848
+
+
+Gyroscope Reading: -1.206 -1.847 -2.321
+Accelerometer Reading: -2.866 7.582 5.861
+
+
+Gyroscope Reading: -1.802 -1.298 -2.962
+Accelerometer Reading: -2.877 7.706 5.849
+
+
+Gyroscope Reading: -2.198 -0.687 -2.885
+Accelerometer Reading: -2.956 7.694 5.863
+
+
+Gyroscope Reading: -1.557 -1.298 -2.809
+Accelerometer Reading: -2.970 7.713 5.868
+
+
+Gyroscope Reading: -2.122 -1.267 -2.824
+Accelerometer Reading: -2.982 7.687 5.899
+
+
+Gyroscope Reading: -2.855 -2.901 -3.160
+Accelerometer Reading: -2.925 7.749 5.936
+
+
+Gyroscope Reading: -6.504 -4.473 -3.450
+Accelerometer Reading: -2.846 7.896 6.075
+
+
+Gyroscope Reading: -14.733 -10.763 -6.901
+Accelerometer Reading: -2.962 7.659 6.171
+
+
+Gyroscope Reading: -13.084 -16.718 -8.641
+Accelerometer Reading: -2.904 7.445 6.263
+
+
+Gyroscope Reading: -9.573 -18.580 -8.947
+Accelerometer Reading: -2.899 7.512 6.182
+
+
+Gyroscope Reading: -7.099 -19.664 -7.084
+Accelerometer Reading: -2.885 7.636 5.940
+
+
+Gyroscope Reading: -5.985 -16.947 -5.023
+Accelerometer Reading: -2.875 7.634 5.838
+
+
+Gyroscope Reading: 0.031 -14.458 -3.618
+Accelerometer Reading: -2.915 7.621 5.731
+
+
+Gyroscope Reading: 4.366 -13.282 -2.794
+Accelerometer Reading: -2.911 7.667 5.766
+
+
+Gyroscope Reading: 4.824 -10.824 -0.885
+Accelerometer Reading: -2.860 0.613 19.652
+
+
+Gyroscope Reading: 4.153 -10.702 2.076
+Accelerometer Reading: -2.865 7.802 6.102
+
+
+Gyroscope Reading: 4.397 -10.412 4.015
+Accelerometer Reading: -2.841 7.720 6.104
+
+
+Gyroscope Reading: 2.458 -8.107 6.840
+Accelerometer Reading: -2.793 7.557 6.073
+
+
+Gyroscope Reading: 1.634 -7.420 6.931
+Accelerometer Reading: -2.749 7.491 6.013
+
+
+Gyroscope Reading: -0.763 -3.908 7.282
+Accelerometer Reading: -2.666 7.429 5.980
+
+
+Gyroscope Reading: -2.046 -1.450 7.405
+Accelerometer Reading: -2.623 7.448 6.050
+
+
+Gyroscope Reading: -3.786 1.893 7.573
+Accelerometer Reading: -2.600 7.468 6.070
+
+
+Gyroscope Reading: -6.198 6.534 8.947
+Accelerometer Reading: -2.606 7.502 6.067
+
+
+Gyroscope Reading: -7.771 9.649 9.725
+Accelerometer Reading: -2.600 7.478 6.081
+
+
+Gyroscope Reading: -9.130 13.908 10.977
+Accelerometer Reading: -2.597 7.433 6.039
+
+
+
+Gyroscope Reading: -9.832 15.908 10.824
+Accelerometer Reading: -2.565 7.408 6.038
+
+
+Gyroscope Reading: -9.466 17.237 8.931
+Accelerometer Reading: -2.602 7.399 6.073
+
+
+Gyroscope Reading: -7.786 16.198 7.145
+Accelerometer Reading: -2.620 7.493 6.074
+
+
+Gyroscope Reading: -5.542 14.565 5.817
+Accelerometer Reading: -2.653 7.567 6.099
+
+
+Gyroscope Reading: -4.702 14.137 5.863
+Accelerometer Reading: -2.646 7.520 6.148
+
+
+Gyroscope Reading: -4.443 15.313 6.489
+Accelerometer Reading: -2.638 7.472 6.142
+
+
+Gyroscope Reading: -4.763 17.450 7.267
+Accelerometer Reading: -2.641 0.613 19.652
+
+
+Gyroscope Reading: -5.771 21.344 11.618
+Accelerometer Reading: -2.750 7.405 6.248
+
+
+Gyroscope Reading: -5.588 19.954 7.359
+Accelerometer Reading: -2.761 7.404 6.224
+
+
+Gyroscope Reading: -6.122 18.962 6.321
+Accelerometer Reading: -2.824 7.359 6.134
+
+
+Gyroscope Reading: -3.832 16.366 5.817
+Accelerometer Reading: -2.813 7.365 6.102
+
+
+Gyroscope Reading: -1.069 12.702 4.092
+Accelerometer Reading: -2.811 7.409 6.067
+
+
+Gyroscope Reading: 0.198 10.672 3.145
+Accelerometer Reading: -2.823 7.451 6.092
+
+
+Gyroscope Reading: 0.550 8.397 1.649
+Accelerometer Reading: -2.836 7.574 6.088
+
+
+Gyroscope Reading: 0.412 6.885 0.931
+Accelerometer Reading: -2.898 0.613 19.652
+
+
+Gyroscope Reading: 2.611 1.618 -2.214
+Accelerometer Reading: -2.944 7.365 6.023
+
+
+Gyroscope Reading: 3.679 -0.015 -3.664
+Accelerometer Reading: -2.941 7.404 5.976
+
+
+^XGyroscope Reading: 5.282 -2.122 -5.038
+Accelerometer Reading: -2.940 7.459 5.929
+
+
+Gyroscope Reading: 6.046 -2.519 -6.092
+Accelerometer Reading: -2.946 7.550 5.845
+
+
+Gyroscope Reading: 5.817 -2.137 -6.733
+Accelerometer Reading: -2.947 7.592 6.106
+
+
+Gyroscope Reading: 5.603 -1.450 -8.031
+Accelerometer Reading: -2.965 7.600 5.710
+
+
+Gyroscope Reading: 6.779 -2.534 -10.366
+Accelerometer Reading: -3.044 7.578 5.532
+
+
+Gyroscope Reading: 9.450 -4.290 -14.840
+Accelerometer Reading: -3.073 7.579 5.498
+
+
+Gyroscope Reading: 12.214 -6.977 -17.847
+Accelerometer Reading: -3.121 7.588 5.444
+
+
+Gyroscope Reading: 15.466 -11.344 -23.527
+Accelerometer Reading: -3.170 7.535 5.412
+
+
+Gyroscope Reading: 18.534 -15.008 -28.275
+Accelerometer Reading: -3.312 7.454 5.381
+
+
+Gyroscope Reading: 22.595 -17.939 -37.053
+Accelerometer Reading: -3.393 7.411 5.492
+
+
+Gyroscope Reading: 27.771 -22.840 -40.000
+Accelerometer Reading: -3.388 7.495 5.750
+
+
+Gyroscope Reading: 40.901 -34.840 -52.275
+Accelerometer Reading: -3.462 7.715 5.801
+
+
+Gyroscope Reading: 45.878 -40.015 -46.931
+Accelerometer Reading: -3.474 7.942 5.946
+
+
+Gyroscope Reading: 45.725 -39.664 -40.122
+Accelerometer Reading: -3.431 7.960 6.092
+
+
+Gyroscope Reading: 42.183 -37.863 -30.473
+Accelerometer Reading: -3.306 8.005 6.158
+
+
+Gyroscope Reading: 36.580 -34.137 -23.511
+Accelerometer Reading: -3.219 7.973 6.136
+
+
+Gyroscope Reading: 26.473 -26.779 -14.656
+Accelerometer Reading: -3.205 7.818 5.880
+
+
+Gyroscope Reading: 19.496 -20.382 -9.786
+Accelerometer Reading: -3.221 7.736 5.646
+
+
+Gyroscope Reading: 9.191 -9.924 -3.847
+Accelerometer Reading: -3.267 7.679 5.429
+
+
+Gyroscope Reading: 3.588 -4.809 -0.641
+Accelerometer Reading: -3.288 7.682 5.359
+
+
+Gyroscope Reading: -6.458 1.053 4.351
+Accelerometer Reading: -3.369 7.654 5.368
+
+
+Gyroscope Reading: -14.443 3.618 8.046
+Accelerometer Reading: -3.359 7.367 5.432
+
+
+^Cnot
+Gyroscope Reading: -0.321 0.351 0.702
+Accelerometer Reading: 0.485 -0.354 -9.765
+
+
+Gyroscope Reading: -0.366 0.229 0.794
+Accelerometer Reading: 0.488 -0.358 -9.768
+
+
+Gyroscope Reading: -0.458 0.366 0.748
+Accelerometer Reading: 0.484 -0.351 -9.761
+
+
+Gyroscope Reading: -0.382 0.214 0.779
+Accelerometer Reading: 0.482 -0.352 -9.764
+
+
+Gyroscope Reading: -0.397 0.351 0.702
+Accelerometer Reading: 0.486 -0.352 -9.764
+
+
+Gyroscope Reading: -0.336 0.229 0.824
+Accelerometer Reading: 0.482 -0.352 -9.773
+
+
+Gyroscope Reading: -0.397 0.366 0.779
+Accelerometer Reading: 0.486 -0.351 -9.767
+
+
+Gyroscope Reading: -0.305 0.229 0.794
+Accelerometer Reading: 0.486 -0.356 -9.767
+
+
+Gyroscope Reading: -0.397 0.336 0.779
+Accelerometer Reading: 0.484 -0.359 -9.761
+
+
+Gyroscope Reading: -0.397 0.198 0.794
+Accelerometer Reading: 0.479 -0.357 -9.766
+
+
+Gyroscope Reading: -0.412 0.351 0.763
+Accelerometer Reading: 0.481 -0.354 -9.756
+
+
+Gyroscope Reading: -0.351 0.275 0.809
+Accelerometer Reading: 0.481 -0.359 -9.758
+
+
+Gyroscope Reading: -0.397 0.305 0.794
+Accelerometer Reading: 0.486 -0.357 -9.754
+
+
+Gyroscope Reading: -0.336 0.229 0.809
+Accelerometer Reading: 0.484 -0.357 -9.765
+
+
+Gyroscope Reading: -0.397 0.260 0.779
+Accelerometer Reading: 0.481 -0.351 -9.756
+
+
+Gyroscope Reading: -0.382 0.229 0.794
+Accelerometer Reading: 0.481 -0.352 -9.761
+
+
+Gyroscope Reading: -0.412 0.275 0.779
+Accelerometer Reading: 0.480 -0.347 -9.768
+
+
+Gyroscope Reading: -0.366 0.260 0.794
+Accelerometer Reading: 0.482 -0.348 -9.758
+
+
+Gyroscope Reading: -0.366 0.260 0.763
+Accelerometer Reading: 0.485 -0.348 -9.768
+
+
+Gyroscope Reading: -0.336 0.260 0.809
+Accelerometer Reading: 0.478 -0.350 -9.767
+
+
+Gyroscope Reading: -0.351 0.321 0.779
+Accelerometer Reading: 0.486 -0.353 -9.764
+
+
+Gyroscope Reading: -0.366 0.275 0.809
+Accelerometer Reading: 0.486 -0.360 -9.762
+
+
+Gyroscope Reading: -0.427 0.290 0.748
+Accelerometer Reading: 0.486 -0.359 -9.765
+
+
+Gyroscope Reading: -0.382 0.275 0.779
+Accelerometer Reading: 0.484 -0.360 -9.772
+
+
+Gyroscope Reading: -0.397 0.305 0.794
+Accelerometer Reading: 0.482 0.613 19.652
+
+
+Gyroscope Reading: -0.382 0.290 0.763
+Accelerometer Reading: 0.484 -0.356 -9.753
+
+
+Gyroscope Reading: -0.397 0.275 0.748
+Accelerometer Reading: 0.487 -0.356 -9.758
+
+
+Gyroscope Reading: -0.397 0.305 0.748
+Accelerometer Reading: 0.491 -0.358 -9.762
+
+
+Gyroscope Reading: -0.382 0.336 0.748
+Accelerometer Reading: 0.481 -0.354 -9.771
+
+
+Gyroscope Reading: -0.397 0.351 0.733
+Accelerometer Reading: 0.478 -0.353 -9.764
+
+
+Gyroscope Reading: -0.412 0.336 0.733
+Accelerometer Reading: 0.478 -0.350 -9.765
+
+
+Gyroscope Reading: -0.412 0.336 0.763
+Accelerometer Reading: 0.480 -0.354 -9.762
+
+
+Gyroscope Reading: -0.366 0.305 0.779
+Accelerometer Reading: 0.484 -0.353 -9.754
+
+
+Gyroscope Reading: -0.397 0.305 0.794
+Accelerometer Reading: 0.480 -0.348 -9.767
+
+
+Gyroscope Reading: -0.412 0.290 0.779
+Accelerometer Reading: 0.484 -0.353 -9.764
+
+
+Gyroscope Reading: -0.412 0.275 0.779
+Accelerometer Reading: 0.481 -0.354 -9.770
+
+
+Gyroscope Reading: -0.412 0.290 0.748
+Accelerometer Reading: 0.482 -0.352 -9.768
+
+
+Gyroscope Reading: -0.366 0.275 0.794
+Accelerometer Reading: 0.480 -0.352 -9.773
+
+
+Gyroscope Reading: -0.351 0.321 0.748
+Accelerometer Reading: 0.481 -0.352 -9.767
+
+
+Gyroscope Reading: -0.321 0.305 0.779
+Accelerometer Reading: 0.480 -0.352 -9.764
+
+
+Gyroscope Reading: -0.336 0.336 0.763
+Accelerometer Reading: 0.484 -0.352 -9.764
+
+
+Gyroscope Reading: -0.382 0.290 0.794
+Accelerometer Reading: 0.482 -0.353 -9.768
+
+
+Gyroscope Reading: -0.397 0.336 0.794
+Accelerometer Reading: 0.480 -0.350 -9.755
+
+
+Gyroscope Reading: -0.366 0.275 0.824
+Accelerometer Reading: 0.485 0.613 19.652
+
+
+Gyroscope Reading: -0.366 0.275 0.748
+Accelerometer Reading: 0.484 -0.353 -9.759
+
+
+Gyroscope Reading: -0.366 0.305 0.733
+Accelerometer Reading: 0.485 -0.354 -9.755
+
+
+Gyroscope Reading: -0.382 0.260 0.779
+Accelerometer Reading: 0.485 -0.350 -9.754
+
+
+Gyroscope Reading: -0.382 0.321 0.763
+Accelerometer Reading: 0.485 -0.352 -9.748
+
+
+Gyroscope Reading: -0.366 0.321 0.763
+Accelerometer Reading: 0.485 -0.354 -9.760
+
+
+Gyroscope Reading: -7.817 -145.099 125.099
+Accelerometer Reading: 19.652 7.049 5.823
+
+
+Gyroscope Reading: -0.366 0.305 0.763
+Accelerometer Reading: 0.485 -0.356 -9.768
+
+
+Gyroscope Reading: -0.382 0.305 0.779
+Accelerometer Reading: 0.473 -0.354 -9.764
+
+
+Gyroscope Reading: -0.351 0.290 0.779
+Accelerometer Reading: 0.476 -9.807 12.567
+
+
+Gyroscope Reading: -0.336 0.275 0.824
+Accelerometer Reading: 0.480 -0.354 -9.758
+
+
+Gyroscope Reading: -0.351 0.290 0.794
+Accelerometer Reading: 0.480 -0.352 -9.759
+
+
+Gyroscope Reading: -0.275 0.351 0.748
+Accelerometer Reading: 0.482 -0.351 -9.756
+
+
+Gyroscope Reading: -0.336 0.336 0.809
+Accelerometer Reading: 0.490 -0.354 -9.758
+
+
+Gyroscope Reading: -0.336 0.290 0.779
+Accelerometer Reading: 0.492 -0.353 -9.753
+
+
+Gyroscope Reading: -0.382 0.305 0.763
+Accelerometer Reading: 0.485 -0.351 -9.747
+
+
+Gyroscope Reading: -0.397 0.305 0.809
+Accelerometer Reading: 0.479 0.613 19.652
+
+
+Gyroscope Reading: -0.321 0.321 0.779
+Accelerometer Reading: 0.478 -0.354 -9.761
+
+
+Gyroscope Reading: -0.382 0.290 0.794
+Accelerometer Reading: 0.484 -0.344 -9.762
+
+
+Gyroscope Reading: -0.336 0.305 0.748
+Accelerometer Reading: 0.486 -0.348 -9.761
+
+
+Gyroscope Reading: -0.321 0.290 0.748
+Accelerometer Reading: 0.485 -0.351 -9.758
+
+
+Gyroscope Reading: -0.397 0.290 0.763
+Accelerometer Reading: 0.487 -0.354 -9.760
+
+
+Gyroscope Reading: -0.366 0.290 0.748
+Accelerometer Reading: 0.485 -0.356 -9.758
+
+
+Gyroscope Reading: -0.366 0.321 0.718
+Accelerometer Reading: 0.485 -0.350 -9.759
+
+
+^Z
+[3]+  Stopped                 python3 IMU_read_gatttool.py
+pi@raspberrypi:~/eSense_IMU $ nano IMU_read_gatttool.py 
+pi@raspberrypi:~/eSense_IMU $ python3 IMU_read_gatttool.py 
+eSense address:
+00:04:79:00:0d:ca
+Run gatttool...
+Connecting to 
+00:04:79:00:0d:ca
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 111, in expect_loop
+    incoming = spawn.read_nonblocking(spawn.maxread, timeout)
+  File "/usr/lib/python3/dist-packages/pexpect/pty_spawn.py", line 482, in read_nonblocking
+    raise TIMEOUT('Timeout exceeded.')
+pexpect.exceptions.TIMEOUT: Timeout exceeded.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "IMU_read_gatttool.py", line 45, in <module>
+    child.expect("Connection successful", timeout=5)
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 341, in expect
+    timeout, searchwindowsize, async_)
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 369, in expect_list
+    return exp.expect_loop(timeout)
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 119, in expect_loop
+    return self.timeout(e)
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 82, in timeout
+    raise TIMEOUT(msg)
+pexpect.exceptions.TIMEOUT: Timeout exceeded.
+<pexpect.pty_spawn.spawn object at 0x76763c50>
+command: /usr/bin/gatttool
+args: ['/usr/bin/gatttool', '-I']
+buffer (last 100 chars): b'0:04:79:00:0d:ca\r\n\x1b[0;91mError: \x1b[0mconnect: Device or resource busy (16)\r\n[00:04:79:00:0d:ca][LE]> '
+before (last 100 chars): b'0:04:79:00:0d:ca\r\n\x1b[0;91mError: \x1b[0mconnect: Device or resource busy (16)\r\n[00:04:79:00:0d:ca][LE]> '
+after: <class 'pexpect.exceptions.TIMEOUT'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: False
+pid: 3596
+child_fd: 5
+closed: False
+timeout: 30
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile(b'Connection successful')
+pi@raspberrypi:~/eSense_IMU $ python3 IMU_read_gatttool.py 
+eSense address:
+00:04:79:00:0d:ca
+Run gatttool...
+Connecting to 
+00:04:79:00:0d:ca
+ Connected!
+Start/Stop Value: 53 34 02 00 32  
+Starting the IMU data sampling....
+Write successful, IMU started publishing
+Gyroscope Reading: -2.336 -0.137 1.038
+Accelerometer Reading: -4.075 3.579 8.472
+
+
+Gyroscope Reading: -1.496 0.824 1.130
+Accelerometer Reading: -4.027 3.553 8.419
+
+
+Gyroscope Reading: -1.527 0.763 1.252
+Accelerometer Reading: -4.017 3.529 8.446
+
+
+Gyroscope Reading: -1.695 0.351 1.145
+Accelerometer Reading: -3.985 3.515 8.513
+
+
+Gyroscope Reading: -183.695 1.298 0.885
+Accelerometer Reading: -4.067 3.566 8.527
+
+
+Gyroscope Reading: -0.763 2.351 1.710
+Accelerometer Reading: -4.013 3.563 8.543
+
+
+Gyroscope Reading: 0.046 3.695 1.725
+Accelerometer Reading: -3.947 3.571 8.541
+
+
+Gyroscope Reading: 0.718 3.389 1.374
+Accelerometer Reading: -3.941 3.596 8.495
+
+
+Gyroscope Reading: 0.198 2.198 1.191
+Accelerometer Reading: -3.947 3.545 8.455
+
+
+Gyroscope Reading: 0.489 1.802 0.519
+Accelerometer Reading: -4.009 3.494 8.412
+
+
+Gyroscope Reading: 0.794 2.534 0.580
+Accelerometer Reading: -4.023 3.521 8.453
+
+
+Gyroscope Reading: 0.718 3.115 0.763
+Accelerometer Reading: -4.021 3.577 8.492
+
+
+Gyroscope Reading: 1.267 3.405 0.473
+Accelerometer Reading: -4.027 3.585 8.485
+
+
+Gyroscope Reading: 1.328 3.878 0.275
+Accelerometer Reading: -4.095 3.579 8.466
+
+
+Gyroscope Reading: 1.298 4.427 0.550
+Accelerometer Reading: -4.129 3.570 8.440
+
+
+Gyroscope Reading: 1.069 4.137 0.779
+Accelerometer Reading: -4.130 3.572 8.412
+
+
+Gyroscope Reading: 0.656 3.679 0.977
+Accelerometer Reading: -4.110 3.565 8.431
+
+
+Gyroscope Reading: -0.779 1.664 1.053
+Accelerometer Reading: -4.070 3.557 8.449
+
+
+Gyroscope Reading: -1.099 0.489 0.885
+Accelerometer Reading: -4.057 3.577 8.464
+
+
+Gyroscope Reading: -0.885 0.550 0.626
+Accelerometer Reading: -4.056 3.572 8.452
+
+
+Gyroscope Reading: -0.336 0.855 0.443
+Accelerometer Reading: -4.081 3.559 8.401
+
+
+Gyroscope Reading: 0.290 1.221 0.183
+Accelerometer Reading: -4.101 3.557 8.383
+
+
+Gyroscope Reading: 1.511 1.908 -0.076
+Accelerometer Reading: -4.099 3.576 8.407
+
+
+Gyroscope Reading: 1.038 1.557 0.229
+Accelerometer Reading: -4.100 3.591 8.441
+
+
+Gyroscope Reading: 0.198 0.687 0.534
+Accelerometer Reading: -4.086 3.598 8.448
+
+
+Gyroscope Reading: -0.107 0.336 0.351
+Accelerometer Reading: -4.119 3.584 8.383
+
+
+Gyroscope Reading: -0.824 -0.076 0.351
+Accelerometer Reading: -4.159 3.589 8.382
+
+
+Gyroscope Reading: -0.519 -0.031 0.580
+Accelerometer Reading: -4.112 3.600 8.436
+
+
+Gyroscope Reading: -0.595 -0.412 0.748
+Accelerometer Reading: -4.096 3.609 8.467
+
+
+Gyroscope Reading: -1.237 -1.267 1.115
+Accelerometer Reading: -4.105 3.564 8.435
+
+
+Gyroscope Reading: -1.710 -0.962 1.405
+Accelerometer Reading: -4.105 3.555 8.420
+
+
+Gyroscope Reading: -1.573 -0.565 1.237
+Accelerometer Reading: -4.083 3.590 8.425
+
+
+Gyroscope Reading: -1.771 -0.855 1.313
+Accelerometer Reading: -4.087 3.600 8.448
+
+
+Gyroscope Reading: -1.298 -0.947 0.840
+Accelerometer Reading: -4.055 3.537 8.428
+
+
+Gyroscope Reading: -1.267 -0.809 0.992
+Accelerometer Reading: -4.101 3.539 8.404
+
+
+Gyroscope Reading: -1.282 -0.641 1.359
+Accelerometer Reading: -4.087 3.572 8.418
+
+
+Gyroscope Reading: -1.038 -0.260 1.481
+Accelerometer Reading: -4.087 3.614 8.436
+
+
+Gyroscope Reading: -1.328 -0.046 1.557
+Accelerometer Reading: -4.050 3.560 8.460
+
+
+Gyroscope Reading: -0.779 0.290 1.099
+Accelerometer Reading: -4.034 3.547 8.498
+
+
+Gyroscope Reading: -0.565 0.260 0.733
+Accelerometer Reading: -4.041 3.589 8.546
+
+
+Gyroscope Reading: -0.580 -0.153 0.305
+Accelerometer Reading: -4.013 3.536 8.497
+
+
+Gyroscope Reading: 0.137 0.214 -0.137
+Accelerometer Reading: -4.033 3.503 8.477
+
+
+Gyroscope Reading: 0.336 0.489 -3.786
+Accelerometer Reading: -4.089 3.512 8.441
+
+
+Gyroscope Reading: 0.718 1.023 0.137
+Accelerometer Reading: -4.112 3.535 8.388
+
+
+Gyroscope Reading: 0.672 1.221 -0.107
+Accelerometer Reading: -4.101 3.546 8.390
+
+
+Gyroscope Reading: 0.229 1.053 -0.061
+Accelerometer Reading: -4.071 3.554 8.441
+
+
+Gyroscope Reading: 0.397 1.130 -0.046
+Accelerometer Reading: -4.113 3.558 8.419
+
+
+Gyroscope Reading: -0.153 0.656 0.534
+Accelerometer Reading: -4.119 3.585 8.412
+
+
+Gyroscope Reading: -0.382 0.626 0.748
+Accelerometer Reading: -4.094 3.570 8.400
+
+
+Gyroscope Reading: -0.885 -2.061 1.160
+Accelerometer Reading: -4.114 3.557 8.468
+
+
+Gyroscope Reading: 0.366 -0.840 1.023
+Accelerometer Reading: -4.117 3.553 8.430
+
+
+Gyroscope Reading: 0.870 0.046 0.840
+Accelerometer Reading: -4.141 3.555 8.377
+
+
+Gyroscope Reading: 0.412 0.611 1.145
+Accelerometer Reading: -4.128 3.535 8.341
+
+
+Gyroscope Reading: 1.038 1.481 0.977
+Accelerometer Reading: -4.086 3.575 8.466
+
+
+Gyroscope Reading: 0.824 1.237 1.053
+Accelerometer Reading: -4.075 3.591 8.509
+
+
+Gyroscope Reading: 0.550 1.023 1.008
+Accelerometer Reading: -4.065 3.614 8.539
+
+
+Gyroscope Reading: 0.275 0.733 1.130
+Accelerometer Reading: -4.068 3.614 8.481
+
+
+Gyroscope Reading: 0.168 0.626 0.931
+Accelerometer Reading: -4.063 3.577 8.426
+
+
+Gyroscope Reading: 0.382 0.550 0.611
+Accelerometer Reading: -4.113 3.597 8.392
+
+
+Gyroscope Reading: -0.382 -0.275 0.840
+Accelerometer Reading: -4.124 3.582 8.376
+
+
+Gyroscope Reading: -1.008 -0.748 1.084
+Accelerometer Reading: -4.119 3.596 8.389
+
+
+Gyroscope Reading: -1.130 -0.611 1.450
+Accelerometer Reading: -4.093 3.575 8.384
+
+
+Gyroscope Reading: -0.351 0.290 1.282
+Accelerometer Reading: -4.073 3.594 8.440
+
+
+Gyroscope Reading: -0.519 0.015 1.160
+Accelerometer Reading: -4.045 3.608 8.479
+
+
+Gyroscope Reading: -0.412 -0.809 0.702
+Accelerometer Reading: -4.037 3.608 8.489
+
+
+Gyroscope Reading: -0.702 -1.237 0.733
+Accelerometer Reading: -4.062 3.610 8.461
+
+
+Gyroscope Reading: -0.382 -0.641 0.794
+Accelerometer Reading: -4.055 3.584 8.423
+
+
+Gyroscope Reading: 0.183 -0.046 0.595
+Accelerometer Reading: -4.064 3.594 8.381
+
+
+Gyroscope Reading: 0.015 -0.107 0.687
+Accelerometer Reading: -4.063 3.590 8.399
+
+
+Gyroscope Reading: 0.275 0.183 0.641
+Accelerometer Reading: -4.039 3.567 8.424
+
+
+Gyroscope Reading: -0.183 0.031 0.412
+Accelerometer Reading: -4.073 3.581 8.448
+
+
+Gyroscope Reading: -0.489 0.000 0.718
+Accelerometer Reading: -4.104 3.590 8.438
+
+
+Gyroscope Reading: -0.214 0.885 0.916
+Accelerometer Reading: -4.144 3.607 8.420
+
+
+Gyroscope Reading: 0.473 1.405 0.885
+Accelerometer Reading: -4.093 3.614 8.428
+
+
+Gyroscope Reading: 0.443 1.130 1.160
+Accelerometer Reading: -4.104 3.639 8.419
+
+
+Gyroscope Reading: -1.084 -0.229 1.542
+Accelerometer Reading: -4.077 3.614 8.441
+
+
+Gyroscope Reading: -1.053 -0.046 1.511
+Accelerometer Reading: -4.075 3.579 8.434
+
+
+Gyroscope Reading: -0.229 0.580 1.008
+Accelerometer Reading: -4.039 3.573 8.485
+
+
+Gyroscope Reading: -0.107 0.443 0.855
+Accelerometer Reading: -4.029 3.579 8.480
+
+
+Gyroscope Reading: 0.061 0.550 0.550
+Accelerometer Reading: -4.038 3.557 8.389
+
+
+Gyroscope Reading: 0.595 1.176 0.076
+Accelerometer Reading: -4.061 3.576 8.361
+
+
+Gyroscope Reading: -0.153 0.473 0.107
+Accelerometer Reading: -4.093 3.597 8.373
+
+
+Gyroscope Reading: -0.641 0.351 0.489
+Accelerometer Reading: -4.114 3.600 8.389
+
+
+Gyroscope Reading: -0.718 0.580 0.763
+Accelerometer Reading: -4.090 3.619 8.475
+
+
+Gyroscope Reading: -0.550 0.443 0.824
+Accelerometer Reading: -4.080 3.637 8.502
+
+
+Gyroscope Reading: -0.519 0.351 1.008
+Accelerometer Reading: -4.074 3.610 8.444
+
+
+Gyroscope Reading: -0.595 -0.153 1.328
+Accelerometer Reading: -4.004 3.608 8.431
+
+
+Gyroscope Reading: -1.115 -0.321 0.962
+Accelerometer Reading: -4.005 3.598 8.383
+
+
+Gyroscope Reading: -1.542 -1.115 0.626
+Accelerometer Reading: -4.029 3.571 8.375
+
+
+Gyroscope Reading: -1.740 -0.916 0.672
+Accelerometer Reading: -4.059 3.577 8.419
+
+
+Gyroscope Reading: -1.542 -0.733 0.702
+Accelerometer Reading: -4.087 3.609 8.484
+
+
+Gyroscope Reading: -1.450 -0.947 0.824
+Accelerometer Reading: -4.089 3.613 8.501
+
+
+Gyroscope Reading: -1.038 -0.366 0.779
+Accelerometer Reading: -4.099 3.588 8.459
+
+
+Gyroscope Reading: -0.718 0.046 0.687
+Accelerometer Reading: -4.080 3.552 8.399
+
+
+Gyroscope Reading: -0.580 -0.137 0.519
+Accelerometer Reading: -4.057 3.571 8.429
+
+
+Gyroscope Reading: -0.916 -0.885 0.885
+Accelerometer Reading: -4.059 3.564 8.468
+
+
+Gyroscope Reading: -0.718 -0.840 0.794
+Accelerometer Reading: -4.039 3.559 8.498
+
+
+Gyroscope Reading: -0.718 -0.718 0.748
+Accelerometer Reading: -4.076 3.602 8.529
+
+
+Gyroscope Reading: -1.252 -1.084 1.069
+Accelerometer Reading: -4.087 3.588 8.478
+
+
+Gyroscope Reading: -0.244 0.092 0.702
+Accelerometer Reading: -4.041 3.567 8.432
+
+
+Gyroscope Reading: -0.336 0.107 0.611
+Accelerometer Reading: -4.027 3.561 8.418
+
+
+Gyroscope Reading: -1.618 -0.580 0.504
+Accelerometer Reading: -3.995 3.543 8.436
+
+
+Gyroscope Reading: -1.603 -0.565 0.412
+Accelerometer Reading: -4.016 3.581 8.486
+
+
+Gyroscope Reading: -2.076 -1.206 0.748
+Accelerometer Reading: -4.044 3.565 8.523
+
+
+Gyroscope Reading: -1.740 -1.237 0.824
+Accelerometer Reading: -4.025 3.572 8.544
+
+
+Gyroscope Reading: -1.450 -0.977 0.748
+Accelerometer Reading: -4.035 3.596 8.526
+
+
+Gyroscope Reading: -1.237 -0.840 0.794
+Accelerometer Reading: -4.052 3.572 8.473
+
+
+Gyroscope Reading: -1.298 -0.321 0.702
+Accelerometer Reading: -4.020 3.533 8.412
+
+
+Gyroscope Reading: -1.389 0.061 0.916
+Accelerometer Reading: -4.041 3.546 8.389
+
+
+Gyroscope Reading: -2.137 0.214 1.374
+Accelerometer Reading: -3.995 3.503 8.389
+
+
+Gyroscope Reading: -1.969 1.038 1.191
+Accelerometer Reading: -3.989 3.508 8.487
+
+
+Gyroscope Reading: -1.542 1.817 0.885
+Accelerometer Reading: -3.973 3.534 8.544
+
+
+Gyroscope Reading: -1.267 1.618 0.626
+Accelerometer Reading: -4.002 3.588 8.581
+
+
+Gyroscope Reading: -1.985 -0.183 0.794
+Accelerometer Reading: -4.019 3.564 8.554
+
+
+Gyroscope Reading: -2.412 -1.267 0.977
+Accelerometer Reading: -4.043 3.508 8.486
+
+
+Gyroscope Reading: -2.565 -1.420 0.931
+Accelerometer Reading: -4.074 3.488 8.449
+
+
+Gyroscope Reading: -2.366 -0.763 1.115
+Accelerometer Reading: -4.086 3.496 8.465
+
+
+Gyroscope Reading: -2.412 -0.779 1.405
+Accelerometer Reading: -4.081 3.506 8.466
+
+
+^Z
+[4]+  Stopped                 python3 IMU_read_gatttool.py
+pi@raspberrypi:~/eSense_IMU $ nano IMU_fusion.py 
+pi@raspberrypi:~/eSense_IMU $ python3 IMU_fusion.py 
+eSense address:
+00:04:79:00:0d:ca
+Run gatttool...
+Connecting to 
+00:04:79:00:0d:ca
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 111, in expect_loop
+    incoming = spawn.read_nonblocking(spawn.maxread, timeout)
+  File "/usr/lib/python3/dist-packages/pexpect/pty_spawn.py", line 482, in read_nonblocking
+    raise TIMEOUT('Timeout exceeded.')
+pexpect.exceptions.TIMEOUT: Timeout exceeded.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "IMU_fusion.py", line 91, in <module>
+    child.expect("Connection successful", timeout=5)
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 341, in expect
+    timeout, searchwindowsize, async_)
+  File "/usr/lib/python3/dist-packages/pexpect/spawnbase.py", line 369, in expect_list
+    return exp.expect_loop(timeout)
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 119, in expect_loop
+    return self.timeout(e)
+  File "/usr/lib/python3/dist-packages/pexpect/expect.py", line 82, in timeout
+    raise TIMEOUT(msg)
+pexpect.exceptions.TIMEOUT: Timeout exceeded.
+<pexpect.pty_spawn.spawn object at 0x7670fcb0>
+command: /usr/bin/gatttool
+args: ['/usr/bin/gatttool', '-I']
+buffer (last 100 chars): b'0:04:79:00:0d:ca\r\n\x1b[0;91mError: \x1b[0mconnect: Device or resource busy (16)\r\n[00:04:79:00:0d:ca][LE]> '
+before (last 100 chars): b'0:04:79:00:0d:ca\r\n\x1b[0;91mError: \x1b[0mconnect: Device or resource busy (16)\r\n[00:04:79:00:0d:ca][LE]> '
+after: <class 'pexpect.exceptions.TIMEOUT'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: False
+pid: 3649
+child_fd: 5
+closed: False
+timeout: 30
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile(b'Connection successful')
+pi@raspberrypi:~/eSense_IMU $ python3 IMU_fusion.py 
+eSense address:
+00:04:79:00:0d:ca
+Run gatttool...
+Connecting to 
+00:04:79:00:0d:ca
+ Connected!
+Start/Stop Value: 53 34 02 00 32  
+Starting the IMU data sampling....
+Write successful, IMU started publishing
+
+
+-0.6551685683612727
+-0.5518772107048364
+not
+
+
+-0.7554709781415446
+-0.5921905785471178
+not
+
+
+-0.6927848926711412
+-0.5484469263954695
+not
+
+
+-0.6597177155546653
+-0.5433885956981547
+not
+
+
+-0.7784795395604335
+-0.6007819482980453
+not
+
+
+-0.514220180938411
+-0.6538466733809148
+not
+
+
+-0.6996066909226307
+-0.5141633407419404
+not
+
+
+-0.6255285333378765
+-0.5899569521538999
+not
+
+
+-0.579546784762573
+-0.5910828138093768
+not
+
+
+-0.799879825133744
+-0.404774341892836
+not
+
+
+-0.2300597366564885
+-0.6051721666073226
+not
+
+
+-0.10150977358143631
+-0.5704088139504194
+not
+
+
+-0.18609210498346523
+-0.5731753833930792
+not
+
+
+0.03532226429351973
+-0.6413802170260553
+not
+
+
+-0.13056344931104447
+-0.5851700459769607
+not
+
+
+-0.04342376778881859
+-0.6114714785829671
+not
+
+
+-0.030624162449246393
+-0.5991956375292435
+not
+
+
+0.02926772399060381
+-0.6221398286149925
+not
+
+
+0.017242258383444255
+-0.6399996552066497
+not
+
+
+0.047939194036885416
+-0.6254350298022758
+not
+
+
+0.11928383403160057
+-0.6574010213153795
+not
+
+
+0.1540792520870856
+-0.7795247583225546
+not
+
+
+0.2168223071750175
+-0.794778639399072
+not
+
+
+0.3441589141509813
+-0.969828435581505
+not
+
+
+0.36202858976990904
+-0.9385929979493512
+not
+
+
+0.3067794960199588
+-0.8603376922294171
+not
+
+
+0.32396609398684284
+-0.8729414959637323
+not
+
+
+0.32824161493480586
+-0.8668081212338639
+not
+
+
+0.3288386122405857
+-0.8871828655589641
+not
+
+
+0.2723436816650867
+-0.8608544690887403
+not
+
+
+0.2737012651672996
+-0.8599914471174531
+not
+
+
+0.326098839618862
+-0.8638107292675332
+not
+
+
+0.3302857796464939
+-0.8819157883812627
+not
+
+
+0.38856249918360075
+-0.9132275309530566
+not
+
+
+0.3335272267563186
+-0.8947814147301206
+not
+
+
+0.3406137623357117
+-0.9018521959518444
+not
+
+
+0.33491133649455035
+-0.9035408874068833
+not
+
+
+0.34870733570561513
+-0.9028893518574945
+not
+
+
+0.33447906596424604
+-0.9048680707531254
+not
+
+
+0.31291615025976055
+-0.8859688093126998
+not
+
+
+0.3180636975789232
+-0.8920468146335842
+not
+
+
+0.32434803053320355
+-0.9089553791022575
+not
+
+
+0.3390435568273611
+-0.8883963501948452
+not
+
+
+0.293478216708337
+-0.8942541252404005
+not
+
+
+0.3014633951405236
+-0.9052267547256869
+not
+
+
+0.30673610705723287
+
