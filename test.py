@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+# No change
+>>>>>>> c7362c107aeeed4ee0783cee70b4525f0371ddea
 import sys
 import time
 
