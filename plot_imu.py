@@ -1,6 +1,8 @@
 cimport pexpect
 import time
 import math
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
 
 
@@ -37,10 +39,12 @@ last_z_angle = 0.0
 
 def c_filtered_angle(ax_angle, ay_angle, gx_angle, gy_angle):
     alpha = 0.98
-    c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle        
+    c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle
     c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
     return (c_angle_x, c_angle_y)
 
+def get_last_time():
+    return last_read_time
 
 def get_last_x_angle():
     return last_x_angle
@@ -59,8 +63,8 @@ def gyr_angle(Gx, Gy, Gz, dt):
 
 def acc_angle(Ax, Ay, Az):
     radToDeg = 180/3.14159
-    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # 
-    ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitch
+    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg
+    ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg
     return (ax_angle, ay_angle)
 
 
@@ -149,4 +153,6 @@ while True:
     except:
         print("not")
         pass
+
+
 
