@@ -36,7 +36,7 @@ last_y_angle = 0.0
 last_z_angle = 0.0
 
 def c_filtered_angle(ax_angle, ay_angle, gx_angle, gy_angle):
-    alpha = 0.98
+    alpha = 0.92
     c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle        
     c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
     return (c_angle_x, c_angle_y)
@@ -59,7 +59,7 @@ def gyr_angle(Gx, Gy, Gz, dt):
 
 def acc_angle(Ax, Ay, Az):
     radToDeg = 180/3.14159
-    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # 
+    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # Roll
     ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitch
     return (ax_angle, ay_angle)
 
