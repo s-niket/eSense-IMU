@@ -40,7 +40,7 @@ def c_filtered_angle(ax_angle, ay_angle, az_angle, gx_angle, gy_angle, gz_angle)
     c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle
     c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
     c_angle_z = alpha*gz_angle + (1.0 - alpha)*az_angle
-    return (c_angle_x, c_angle_y, c_angle_z)
+    return c_angle_x, c_angle_y, c_angle_z
 
 
 def get_last_x_angle():
@@ -56,18 +56,18 @@ def gyr_angle(Gx, Gy, Gz, dt):
     gx_angle = Gx*dt + get_last_x_angle()
     gy_angle = Gy*dt + get_last_y_angle()
     gz_angle = Gz*dt + get_last_z_angle()
-    return (gx_angle, gy_angle, gz_angle)
+    return gx_angle, gy_angle, gz_angle
 
 def acc_angle(Ax, Ay, Az):
     radToDeg = 180/3.14159
     ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # Roll
     ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitc
     az_angle = math.atan((-1*Az)/math.sqrt((math.pow(Ax,2) + math.pow(Az,2)))*radToDeg   # Yaw
-    return (ax_angle, ay_angle, az_angle)
+    return ax_angle, ay_angle, az_angle
 
 
 def set_last_read_angles(x, y, z):
-    global last_x_angle, last_y_angle
+    global last_x_angle, last_y_angle, last_z_angle
     last_x_angle = x
     last_y_angle = y
     last_z_angle = z
@@ -131,22 +131,20 @@ while True:
                # print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
 
                 print("\n")
-
-                
                 dt =  1/50
 
                 # Calculate angle of inclination or tilt for the x and y axes with acquired acceleration vectors
-                acc_angles = acc_angle(accl_x, accl_y, accl_z)
-                gyr_angles = gyr_angle(gyro_x, gyro_y, gyro_z, dt)
+                acc_angle_x, acc_angle_y, acc_angle_z = acc_angle(accl_x, accl_y, accl_z)
+                gyr_angle_x, gyr_angle_y, gyr_angle_z = gyr_angle(gyro_x, gyro_y, gyro_z, dt)
                # print(acc_angles)
                 #print(gyr_angles)
 
                 # filtered tilt angle
-                (c_angle_x, c_angle_y, c_angle_z) = c_filtered_angle(acc_angles[0], acc_angles[1], acc_angles[2],  gyr_angles[0], gyr_angles[1], gyr_angles[2]) 
+                c_angle_x, c_angle_y, c_angle_z = c_filtered_angle(acc_angle_x, acc_angle_y, acc_angle_z,  gyr_angle_x, gyr_angle_y, gyr_angle_z)
                 print(c_angle_x)
                 print(c_angle_y)
                 print(c_angle_z)
-                set_last_read_angles( c_angle_x, c_angle_y)
+                set_last_read_angles(c_angle_x, c_angle_y, c_angle_z)
 
     except:
         print("not")
