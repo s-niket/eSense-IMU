@@ -36,11 +36,10 @@ last_y_angle = 0.0
 last_z_angle = 0.0
 
 def c_filtered_angle(ax_angle, ay_angle, gx_angle, gy_angle):
-    alpha = 0.92
+    alpha = 0.98
     c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle        
     c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
-    c_angle_z = alpha*gz_angle + (1.0 - alpha)*az_angle
-    return (c_angle_x, c_angle_y, c_angle_z)
+    return (c_angle_x, c_angle_y)
 
 
 def get_last_x_angle():
@@ -60,17 +59,15 @@ def gyr_angle(Gx, Gy, Gz, dt):
 
 def acc_angle(Ax, Ay, Az):
     radToDeg = 180/3.14159
-    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # Roll
-    ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitc
-    az_angle = math.atan((-1*Az)/math.sqrt((math.pow(Ax,2) + math.pow(Az,2)))*radToDeg   # Yaw
-    return (ax_angle, ay_angle, az_angle)
+    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # 
+    ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitch
+    return (ax_angle, ay_angle)
 
 
-def set_last_read_angles(x, y, z):
+def set_last_read_angles(x, y):
     global last_x_angle, last_y_angle
     last_x_angle = x
     last_y_angle = y
-    last_z_angle = z
 
 
 
@@ -132,7 +129,9 @@ while True:
 
                 print("\n")
 
-                
+                #t_now = time.ticks_ms()    #The Error is happening here
+                #print(t_now)
+                #dt = (t_now - get_last_time())/1000
                 dt =  1/50
 
                 # Calculate angle of inclination or tilt for the x and y axes with acquired acceleration vectors
@@ -142,10 +141,9 @@ while True:
                 #print(gyr_angles)
 
                 # filtered tilt angle
-                (c_angle_x, c_angle_y, c_angle_z) = c_filtered_angle(acc_angles[0], acc_angles[1], gyr_angles[0], gyr_angles[1]) 
+                (c_angle_x, c_angle_y) = c_filtered_angle(acc_angles[0], acc_angles[1], gyr_angles[0], gyr_angles[1]) 
                 print(c_angle_x)
                 print(c_angle_y)
-                print(c_angle_z)
                 set_last_read_angles( c_angle_x, c_angle_y)
 
     except:
