@@ -62,7 +62,7 @@ def acc_angle(Ax, Ay, Az):
     radToDeg = 180/3.14159
     ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # Roll
     ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitc
-    az_angle = math.atan((-1*Az)/math.sqrt((math.pow(Ax,2) + math.pow(Az,2)))*radToDeg   # Yaw
+    az_angle = math.atan((-1*Az)/math.sqrt(math.pow(Ax,2) + math.pow(Az,2)))*radToDeg   # Yaw
     return ax_angle, ay_angle, az_angle
 
 
