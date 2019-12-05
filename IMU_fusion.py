@@ -35,9 +35,9 @@ last_x_angle = 0.0
 last_y_angle = 0.0
 last_z_angle = 0.0
 
-def c_filtered_angle(ax_angle, ay_angle, gx_angle, gy_angle):
+def c_filtered_angle(ax_angle, ay_angle, az_angle, gx_angle, gy_angle, gz_angle):
     alpha = 0.92
-    c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle        
+    c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle
     c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
     c_angle_z = alpha*gz_angle + (1.0 - alpha)*az_angle
     return (c_angle_x, c_angle_y, c_angle_z)
@@ -142,7 +142,7 @@ while True:
                 #print(gyr_angles)
 
                 # filtered tilt angle
-                (c_angle_x, c_angle_y, c_angle_z) = c_filtered_angle(acc_angles[0], acc_angles[1], gyr_angles[0], gyr_angles[1]) 
+                (c_angle_x, c_angle_y, c_angle_z) = c_filtered_angle(acc_angles[0], acc_angles[1], acc_angles[2],  gyr_angles[0], gyr_angles[1], gyr_angles[2]) 
                 print(c_angle_x)
                 print(c_angle_y)
                 print(c_angle_z)
