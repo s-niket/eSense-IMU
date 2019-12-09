@@ -1,7 +1,6 @@
 import pexpect
 import time
 import datetime as dt
-import matplotlib.pyplot as plt
 
 
 def hexStrToInt(hexstr1, hexstr2):
@@ -85,9 +84,6 @@ while True:
                 print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
                 
             
-               # plt.scatter(i, accl_x)
-               # plt.pause(0.001)
-               # i+=1
 
                 time.sleep(0.001)
                 print("\n")

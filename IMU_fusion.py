@@ -1,8 +1,12 @@
 import pexpect
 import time
 import math
-import matplotlib.pyplot as plt
 import os
+from pyqtgraph.Qt import QtGui, QtCore
+import numpy as np
+from numpy import arange, sin, cos, pi
+import pyqtgraph as pg
+import sys
 
 
 last_read_time = 0.0
@@ -112,13 +116,13 @@ print("Write successful, IMU started publishing")
 
 i = 0
 
-path = 'Sensor_Data.txt'
+#path = 'Sensor_Data.txt'
 
-if os.path.exists(path):
-    print("File exists")
-    os.remove(path)
+#if os.path.exists(path):
+#    print("File exists")
+#    os.remove(path)
 
-f = open("Sensor_Data.txt", "w")
+#f = open("Sensor_Data.txt", "w")
 
 
 while True:
@@ -143,8 +147,13 @@ while True:
                 _imu_values = imu_values[12:14]
 
                 #print(imu_values[12:47])
-                gyro_x, gyro_y, gyro_z = getGyroValues(imu_values)
-                accl_x, accl_y, accl_z = getAcclValues(imu_values)
+                
+                try:
+                    gyro_x, gyro_y, gyro_z = getGyroValues(imu_values)
+                    accl_x, accl_y, accl_z = getAcclValues(imu_values)
+
+                except:
+                    continue
                 #print("Gyroscope Reading: {0:.3f} {1:.3f} {2:.3f}".format(gyro_x, gyro_y, gyro_z))
                 #print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
                 print("\n")
@@ -157,17 +166,15 @@ while True:
                 #print(gyr_angles)
 		
 
-
-
                 # filtered tilt angle
                 roll, pitch, yaw = c_filtered_angle(acc_angle_x, acc_angle_y, acc_angle_z,  gyr_angle_x, gyr_angle_y, gyr_angle_z)
                 print("Roll: {0:.3f}  Pitch: {1:.3f} Yaw: {2:.3f}".format(roll, pitch, yaw))
-                set_last_read_angles(roll, pitch, yaw)
-                f.write("{0:.3f}, {1:.3f}, {2:.3f} \n".format(roll, pitch, yaw))
+                set_last_read_angles(gyr_angle_x, gyr_angle_y, gyr_angle_z)
+                #f.write("{0:.3f}, {1:.3f}, {2:.3f} \n".format(roll, pitch, yaw))
                  
     
     except pexpect.exceptions.TIMEOUT:
         pass
     
     
-f.close()
+#f.close()
