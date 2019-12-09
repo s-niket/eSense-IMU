@@ -1,6 +1,7 @@
 import pexpect
 import time
-
+import datetime as dt
+import matplotlib.pyplot as plt
 
 
 def hexStrToInt(hexstr1, hexstr2):
@@ -57,7 +58,7 @@ child.expect("Characteristic value was written successfully", timeout=10)
 child.expect("\r\n", timeout=10)
 print("Write successful, IMU started publishing")
 
-
+i = 0
 while True:
     #try:
     child.sendline("char-read-hnd 0x000e")
@@ -82,11 +83,17 @@ while True:
                 accl_x, accl_y, accl_z = getAcclValues(imu_values)
                 print("Gyroscope Reading: {0:.3f} {1:.3f} {2:.3f}".format(gyro_x, gyro_y, gyro_z))
                 print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
+                
+            
+               # plt.scatter(i, accl_x)
+               # plt.pause(0.001)
+               # i+=1
 
+                time.sleep(0.001)
                 print("\n")
-                time.sleep(0.4)
+    
+        #plt.show() 
     except:
-        print("not")
         pass
     
     

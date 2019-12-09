@@ -1,7 +1,14 @@
 import pexpect
 import time
 import math
+import matplotlib.pyplot as plt
+import os
 
+
+last_read_time = 0.0
+last_x_angle = 0.0
+last_y_angle = 0.0
+last_z_angle = 0.0
 
 
 def hexStrToInt(hexstr1, hexstr2):
@@ -29,18 +36,19 @@ def getAcclValues(hexstr):
 
 
 
-last_read_time = 0.0
-
-last_x_angle = 0.0
-last_y_angle = 0.0
-last_z_angle = 0.0
-
 def c_filtered_angle(ax_angle, ay_angle, az_angle, gx_angle, gy_angle, gz_angle):
-    alpha = 0.92
-    c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle
-    c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
-    c_angle_z = alpha*gz_angle + (1.0 - alpha)*az_angle
-    return c_angle_x, c_angle_y, c_angle_z
+    alpha = 0.98
+    
+    pitch = alpha*gx_angle + (1.0 - alpha)*ax_angle
+    
+    yaw = alpha*gy_angle + (1.0 - alpha)*ay_angle
+    
+    roll = alpha*gz_angle + (1.0 - alpha)*az_angle
+
+    # c_angle_x = alpha*gx_angle + (1.0 - alpha)*ax_angle
+    # c_angle_y = alpha*gy_angle + (1.0 - alpha)*ay_angle
+    # c_angle_z = alpha*gz_angle + (1.0 - alpha)*az_angle
+    return roll, pitch, yaw
 
 
 def get_last_x_angle():
@@ -60,9 +68,9 @@ def gyr_angle(Gx, Gy, Gz, dt):
 
 def acc_angle(Ax, Ay, Az):
     radToDeg = 180/3.14159
-    ax_angle = math.atan(Ay/math.sqrt(math.pow(Ax,2) + math.pow(Az, 2)))*radToDeg        # Roll
-    ay_angle = math.atan((-1*Ax)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg   # Pitc
-    az_angle = math.atan((-1*Az)/math.sqrt(math.pow(Ax,2) + math.pow(Az,2)))*radToDeg   # Yaw
+    ax_angle = math.atan(Ax/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg       
+    ay_angle = math.atan((-Ay)/math.sqrt(math.pow(Ay,2) + math.pow(Az, 2)))*radToDeg  
+    az_angle = math.atan((-Az)/math.sqrt(math.pow(Ax,2) + math.pow(Ax,2)))*radToDeg   
     return ax_angle, ay_angle, az_angle
 
 
@@ -71,7 +79,6 @@ def set_last_read_angles(x, y, z):
     last_x_angle = x
     last_y_angle = y
     last_z_angle = z
-
 
 
 
@@ -103,6 +110,16 @@ child.expect("Characteristic value was written successfully", timeout=10)
 child.expect("\r\n", timeout=10)
 print("Write successful, IMU started publishing")
 
+i = 0
+
+path = 'Sensor_Data.txt'
+
+if os.path.exists(path):
+    print("File exists")
+    os.remove(path)
+
+f = open("Sensor_Data.txt", "w")
+
 
 while True:
     #try:
@@ -112,6 +129,7 @@ while True:
     #print("Raw values: ",child.before.decode("utf-8").split('\r\n'))
     raw = child.before.decode("utf-8").split('\r\n')
     #print(raw)
+
 
     try:
         for i in range(1,len(raw)):
@@ -127,26 +145,29 @@ while True:
                 #print(imu_values[12:47])
                 gyro_x, gyro_y, gyro_z = getGyroValues(imu_values)
                 accl_x, accl_y, accl_z = getAcclValues(imu_values)
-               # print("Gyroscope Reading: {0:.3f} {1:.3f} {2:.3f}".format(gyro_x, gyro_y, gyro_z))
-               # print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
-
+                #print("Gyroscope Reading: {0:.3f} {1:.3f} {2:.3f}".format(gyro_x, gyro_y, gyro_z))
+                #print("Accelerometer Reading: {0:.3f} {1:.3f} {2:.3f}".format(accl_x, accl_y, accl_z))
                 print("\n")
                 dt =  1/50
 
                 # Calculate angle of inclination or tilt for the x and y axes with acquired acceleration vectors
                 acc_angle_x, acc_angle_y, acc_angle_z = acc_angle(accl_x, accl_y, accl_z)
                 gyr_angle_x, gyr_angle_y, gyr_angle_z = gyr_angle(gyro_x, gyro_y, gyro_z, dt)
-               # print(acc_angles)
+                #print(acc_angles)
                 #print(gyr_angles)
+		
+
+
 
                 # filtered tilt angle
-                c_angle_x, c_angle_y, c_angle_z = c_filtered_angle(acc_angle_x, acc_angle_y, acc_angle_z,  gyr_angle_x, gyr_angle_y, gyr_angle_z)
-                print(c_angle_x)
-                print(c_angle_y)
-                print(c_angle_z)
-                set_last_read_angles(c_angle_x, c_angle_y, c_angle_z)
-
-    except:
-        print("not")
+                roll, pitch, yaw = c_filtered_angle(acc_angle_x, acc_angle_y, acc_angle_z,  gyr_angle_x, gyr_angle_y, gyr_angle_z)
+                print("Roll: {0:.3f}  Pitch: {1:.3f} Yaw: {2:.3f}".format(roll, pitch, yaw))
+                set_last_read_angles(roll, pitch, yaw)
+                f.write("{0:.3f}, {1:.3f}, {2:.3f} \n".format(roll, pitch, yaw))
+                 
+    
+    except pexpect.exceptions.TIMEOUT:
         pass
-
+    
+    
+f.close()
