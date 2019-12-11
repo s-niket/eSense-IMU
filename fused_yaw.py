@@ -26,6 +26,8 @@ class IMU_Read:
 		self.yaw_list = []
 		self.count = 0
 		self.x_axis = []
+		self.acc_yaw_list = []
+		self.gyro_yaw_list = []
 		self.DEVICE = "00:04:79:00:0d:ca"
 		print("eSense address:"),
 		print(self.DEVICE)
@@ -86,6 +88,8 @@ class IMU_Read:
 					self.pitch_list.append(self.pitch)
 					self.yaw_list.append(self.yaw)
 					self.x_axis.append(self.count)
+					self.acc_yaw_list.append(acc_angle_y)
+					self.gyro_yaw_list.append(gyr_angle_y)
 					self.count+=1
 	                #f.write("{0:.3f}, {1:.3f}, {2:.3f} \n".format(roll, pitch, yaw))
 	                 
@@ -93,7 +97,7 @@ class IMU_Read:
 		except pexpect.exceptions.TIMEOUT:
 			pass
 
-		return self.roll_list, self.pitch_list, self.yaw_list, self.x_axis
+		return self.roll_list, self.pitch_list, self.yaw_list, self.x_axis, self.acc_yaw_list, self.gyro_yaw_list
 
 
 	def hexStrToInt(self, hexstr1, hexstr2):
@@ -169,17 +173,16 @@ class Plot2D():
         self.app = QtGui.QApplication([])
         self.win = pg.GraphicsWindow(title="Attitude Estimation")
         self.win.resize(2000,1200)
-        self.win.setWindowTitle('IMU Reading')
+
+        self.win.setWindowTitle('IMU Reading : Yaw')
         pg.setConfigOptions(antialias=True)
-        self.roll_plot = self.win.addPlot(title="Roll", row=1, column=1)
-        self.roll_plot.setLabel(axis='left', text='Angle(Degree)')
-        self.roll_plot.setLabel(axis='bottom', text='Time(Sec)')
-        self.pitch_plot = self.win.addPlot(title="Pitch", row=1, column=2)
-        self.pitch_plot.setLabel(axis='left', text='Angle(Degree)')
-        self.pitch_plot.setLabel(axis='bottom', text='Time(Sec)')
-        self.yaw_plot = self.win.addPlot(title="Yaw", row=1, column=3)
+        # self.roll_plot = self.win.addPlot(title="Roll", row=1, column=1)
+        # self.pitch_plot = self.win.addPlot(title="Pitch", row=1, column=2)
+        self.yaw_plot = self.win.addPlot(title="Yaw")
+        self.yaw_plot.addLegend()
         self.yaw_plot.setLabel(axis='left', text='Angle(Degree)')
         self.yaw_plot.setLabel(axis='bottom', text='Time(Sec)')
+        self.file = open("Sensor_Data.txt", "r")
         self.i = 0
         self.yaw_list = []
         self.x_list = []
@@ -194,20 +197,26 @@ class Plot2D():
         if name in self.traces:
             self.traces[name].setData(dataset_x,dataset_y)
         else:
-            if name=="roll":
-                self.traces[name] = self.roll_plot.plot(pen='c')
-            if name=="pitch":
-                self.traces[name] = self.pitch_plot.plot(pen='r')
+            # if name=="roll":
+            #     self.traces[name] = self.roll_plot.plot(pen='c')
+            # if name=="pitch":
+            #     self.traces[name] = self.pitch_plot.plot(pen='r')
             if name=="yaw":
-                self.traces[name] = self.yaw_plot.plot(pen='y')
+                self.traces[name] = self.yaw_plot.plot(pen='y', name='Fused')
+            if name=="accl":
+            	self.traces[name] = self.yaw_plot.plot(pen='c', name='Accl')
+            if name=="gyro":
+            	self.traces[name] = self.yaw_plot.plot(pen='r', name='Gyro')
                     
     
     def update(self):
-    	roll_list, pitch_list, yaw_list, x_axis = self.imu_read.read_values()
+    	roll_list, pitch_list, yaw_list, x_axis, acc_yaw_list, gyro_yaw_list = self.imu_read.read_values()
  
-    	self.trace("roll", x_axis, roll_list)
-    	self.trace("pitch", x_axis, pitch_list)
+    	#self.trace("roll", x_axis, roll_list)
+    	#self.trace("pitch", x_axis, pitch_list)
     	self.trace("yaw", x_axis, yaw_list)
+    	self.trace("accl", x_axis, acc_yaw_list)
+    	self.trace("gyro", x_axis, gyro_yaw_list)
 
     def animation(self):
         timer = QtCore.QTimer()
